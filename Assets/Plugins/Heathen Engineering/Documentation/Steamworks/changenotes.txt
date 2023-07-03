@@ -1,0 +1,37 @@
+v2020.2.18.3
+
+Note:
+This asset is dependent on Steamworks.NET and System Core 
+Both Steamworks.NET and System Core can be installed via the Package Manager or by downloading the code from Git Hub.
+This asset will assist you in installing both Steamworks.NET and System Core or you can follow the instructions on our Knowledge Base
+
+This asset is a copy of what is available on Heathen's SourceRepo on GitHub. you can gain access to Heathen's SourceRepo by becoming a GitHub Sponsor.
+https://github.com/sponsors/heathen-engineering
+At the 10 USD level you get full source access to Steamworks Complete, PhysKit Complete and UX Complete plus additional assets not available on Unity Asset Store
+such as Steam uGUI Tools and dedicated support, issue tracking and feedback systems.
+
+GitHub
+- Updated to be in line with the GitHub version, GitHub is now the primary source for Steamworks Complete Unity Asset Store will be mainted as a copy but may be a few versions behind. The following is a summary of changes but may not detail all changes.
+
+Changes
+- Adjusted assembly references to remove most 3rd party assembly referneces, this caused some users to get concerned when they saw missing refereince due to not understanding that some references are optional
+- Updated DISABLESTEAMWORKS define usage to match the current state in Steamworks.NET
+- Updated script define usage to use assembly definition script defines as opposed to global script defines
+- Removed global script define scripting
+- Updated UserData, Lobby and Clan structures with additional quality of life features around Steam's ID and Account ID funcitons
+
+
+====================
+PLEASE NOTE
+====================
+
+If you have issues where in Steam attempts to launch your game (or Spacewar) when you start simulating in Unity the most likely cause of this issue is that you do not have steam_appid.txt located in the root of your project.
+steam_appid.txt is a simple text file that should be located in the root of your project (beside not in the Asset folder) it should contain only your app ID.
+
+An example of a valid steam_appid.txt follows, only the content between the dashed lines should be used e.g. only the number 480 should be in the file.
+               
+               Start File
+-----------------------------------------------
+480
+-----------------------------------------------
+               End File

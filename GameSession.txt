@@ -1,0 +1,11 @@
+{
+    "GameSession": {
+        "GameSessionId": "arn:aws:gamelift:local::gamesession/123/gsess-de68dd52-73fa-4423-ba3c-35123d90868d",
+        "FleetId": "123",
+        "MaximumPlayerSessionCount": 2,
+        "Status": "ACTIVATING",
+        "IpAddress": "127.0.0.1",
+        "DnsName": "localhost",
+        "Port": 5000
+    }
+}
