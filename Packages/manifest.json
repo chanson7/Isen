@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.amazonaws.gamelift": "file:C:/Users/hanso/Dev/com.amazonaws.gamelift-1.2.0.tgz",
     "com.heathen.systemcore": "https://github.com/heathen-engineering/SystemCore.git?path=/com.heathen.systemcore",
     "com.rlabrecque.steamworks.net": "https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net",
     "com.unity.2d.pixel-perfect": "5.0.3",

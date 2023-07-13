@@ -1,54 +1,65 @@
 using UnityEngine;
 using Mirror;
-using System.Collections;
+using FIMSpace.Generating;
+using System.Collections.Generic;
 
 public class GameManager : NetworkBehaviour
 {
 
-    double serverStartTime;
-    int playerCount = 0;
+    public static GameManager singleton { get; private set; }
+    const int SEED_RANGE = 9999;
+    [SerializeField] BuildPlannerExecutor buildPlannerExecutor;
+    GameState gameState;
+    List<Transform> playerSpawnPoints = new List<Transform>();
+    [SyncVar(hook = nameof(GenerateMap))] int randomSeed;
 
-    [SerializeField] double playerDisconnectTimeOut = 20;
-    [SerializeField] double gameSessionTimeOut = 120;
+    private void Awake()
+    {
+        if (singleton is not null)
+            Destroy(singleton.gameObject);
 
+        singleton = this;
+        gameState = this.GetComponent<GameState>();
+    }
 
     public override void OnStartServer()
     {
-        serverStartTime = Time.timeAsDouble;
+        gameState.SetState(GameState.EGameState.Loading);
 
-        if (gameSessionTimeOut > 0)
-            StartCoroutine(GameSessionTimeOut(gameSessionTimeOut));
+        randomSeed = Random.Range(-SEED_RANGE, SEED_RANGE);
     }
 
-    public void OnPlayerJoinedGameSession()
+    void GenerateMap(int oldSeed, int newSeed)
     {
-        playerCount++;
+        buildPlannerExecutor.Seed = newSeed;
+        buildPlannerExecutor.Generate();
     }
 
-    public void OnPlayerLeftGameSession()
+    public void OnMapGenerated()
     {
-        playerCount--;
-        CheckForGameTimeOut();
+        if (isServer)
+            gameState.SetState(GameState.EGameState.Pregame);
     }
 
-    //do this when a player leaves the game session to see if we should end the game
+    public void RegisterPlayerSpawnPoint(Transform playerSpawnPointTransform)
+    {
+        playerSpawnPoints.Add(playerSpawnPointTransform);
+    }
+
     [Server]
-    void CheckForGameTimeOut()
+    public void SpawnPlayers()
     {
-        if (playerCount < 1 && Time.time - serverStartTime > playerDisconnectTimeOut)
+        foreach (var connection in NetworkServer.connections)
         {
-            Debug.Log("..All players have disconnected. Ending the game.");
-            Application.Quit();
+            var randomIndex = Random.Range(0, playerSpawnPoints.Count);
+            Transform playerSpawnTransform = playerSpawnPoints[randomIndex];
+
+            playerSpawnPoints.RemoveAt(randomIndex);
+
+            GameObject player = Instantiate(SteamNetworkManager.singleton.playerPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation);
+
+            NetworkServer.AddPlayerForConnection(connection.Value, player);
         }
-    }
-
-    IEnumerator GameSessionTimeOut(double gameTimeOut)
-    {
-        Debug.Log($"..Game Session will time out in {gameTimeOut} seconds");
-
-        yield return new WaitForSeconds((float)gameTimeOut);
-
-        Application.Quit();
     }
 
 }

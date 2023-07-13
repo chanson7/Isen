@@ -1,6 +1,7 @@
 trackSelection = true
+refreshSearchWindowsInPlayMode = false
 fetchPreview = true
-wantsMore = false
+defaultFlags = 0
 keepOpen = false
 queryFolder = "Assets"
 onBoardingDoNotAskAgain = true
@@ -10,6 +11,9 @@ scopes = {
 	"last_search.6CCDBE3C" = ""
 	"OpenInspectorPreview.6CCDBE3C" = "0"
 	"currentGroup.6CCDBE3C" = "all"
+	"last_search.D379D912" = ""
+	"OpenInspectorPreview.D379D912" = "0"
+	"currentGroup.D379D912" = "all"
 }
 providers = {
 	adb = {
@@ -57,6 +61,13 @@ providers = {
 		priority = 100
 		defaultAction = null
 	}
+	profilermarkers = {
+		active = false
+		priority = 100
+		defaultAction = null
+	}
+}
+objectSelectors = {
 }
 recentSearches = [
 ]
@@ -64,9 +75,12 @@ searchItemFavorites = [
 ]
 savedSearchesSortOrder = 0
 showSavedSearchPanel = false
+hideTabs = false
 expandedQueries = [
 ]
 queryBuilder = false
 ignoredProperties = "id;name;classname;imagecontentshash"
 helperWidgetCurrentArea = "all"
 disabledIndexers = ""
+minIndexVariations = 2
+findProviderIndexHelper = true

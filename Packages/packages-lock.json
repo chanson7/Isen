@@ -1,13 +1,5 @@
 {
   "dependencies": {
-    "com.amazonaws.gamelift": {
-      "version": "file:C:/Users/hanso/Dev/com.amazonaws.gamelift-1.2.0.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "2.0.0"
-      }
-    },
     "com.heathen.systemcore": {
       "version": "https://github.com/heathen-engineering/SystemCore.git?path=/com.heathen.systemcore",
       "depth": 0,
@@ -144,13 +136,6 @@
     },
     "com.unity.mathematics": {
       "version": "1.2.6",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.nuget.newtonsoft-json": {
-      "version": "3.2.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
