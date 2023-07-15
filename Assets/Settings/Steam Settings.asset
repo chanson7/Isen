@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applicationId:
     m_AppId: 836430
-  isDebugging: 1
+  callbackTick_Milliseconds: 15
+  isDebugging: 0
   server:
     autoInitialize: 0
     autoLogon: 0
@@ -23,10 +24,8 @@ MonoBehaviour:
     gamePort: 27015
     serverVersion: 1.0.0.0
     spectatorPort: 27017
-    serverId:
-      m_SteamID: 0
     usingGameServerAuthApi: 0
-    enableHeartbeats: 0
+    enableHeartbeats: 1
     supportSpectators: 0
     spectatorServerName: Usually GameDescription + Spectator
     anonymousServerLogin: 0
@@ -41,15 +40,6 @@ MonoBehaviour:
     mapName: 
     gameData: 
     rulePairs: []
-    disconnected:
-      m_PersistentCalls:
-        m_Calls: []
-    connected:
-      m_PersistentCalls:
-        m_Calls: []
-    failure:
-      m_PersistentCalls:
-        m_Calls: []
   client:
     actionSets: []
     actionSetLayers: []
@@ -61,9 +51,3 @@ MonoBehaviour:
   achievements: []
   dlc: []
   leaderboards: []
-  evtSteamInitialized:
-    m_PersistentCalls:
-      m_Calls: []
-  evtSteamInitializationError:
-    m_PersistentCalls:
-      m_Calls: []
