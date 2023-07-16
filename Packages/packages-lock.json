@@ -15,6 +15,13 @@
       },
       "hash": "6d58a14fd74c493bdad1476051e5cd48d3553499"
     },
+    "com.mirror.steamworks.net": {
+      "version": "https://github.com/Chykary/FizzySteamworks.git?path=/com.mirror.steamworks.net",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f586cc33037326c47c79f388de0bfb762b10e6f8"
+    },
     "com.rlabrecque.steamworks.net": {
       "version": "https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net",
       "depth": 0,

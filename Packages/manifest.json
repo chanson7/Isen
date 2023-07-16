@@ -2,6 +2,7 @@
   "dependencies": {
     "com.heathen.steamworkscomplete": "file:C:/Users/hanso/Dev/Projects/GitHub/heathen-engineering/SourceRepo/Steamworks/com.heathen.steamworkscomplete",
     "com.heathen.systemcore": "https://github.com/heathen-engineering/SystemCore.git?path=/com.heathen.systemcore",
+    "com.mirror.steamworks.net": "https://github.com/Chykary/FizzySteamworks.git?path=/com.mirror.steamworks.net",
     "com.rlabrecque.steamworks.net": "https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net",
     "com.unity.2d.pixel-perfect": "5.0.3",
     "com.unity.2d.sprite": "1.0.0",

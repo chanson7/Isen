@@ -2123,10 +2123,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1766148513}
   - component: {fileID: 1766148518}
-  - component: {fileID: 1766148517}
   - component: {fileID: 1766148516}
   - component: {fileID: 1766148515}
   - component: {fileID: 1766148514}
+  - component: {fileID: 1766148519}
   m_Layer: 0
   m_Name: Steam Network Manager
   m_TagString: Untagged
@@ -2163,6 +2163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 1, g: 1, b: 1, a: 1}
   padding: 2
+  width: 150
+  height: 25
 --- !u!114 &1766148515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2175,9 +2177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b149f511061407fb54895c057b7736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrap: {fileID: 1766148517}
-  latencySpikeMultiplier: 0
-  latencySpikeSpeedMultiplier: 1
+  wrap: {fileID: 1766148519}
+  jitter: 0
+  jitterSpeed: 1
   reliableLatency: 0
   unreliableLoss: 0
   unreliableLatency: 0
@@ -2196,35 +2198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetX: 0
   offsetY: 0
---- !u!114 &1766148517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766148510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Port: 7777
-  DualMode: 1
-  NoDelay: 1
-  Interval: 10
-  Timeout: 10000
-  FastResend: 2
-  CongestionWindow: 0
-  SendWindowSize: 4096
-  ReceiveWindowSize: 4096
-  MaxRetransmit: 40
-  NonAlloc: 1
-  MaximizeSendReceiveBuffersToOSLimit: 1
-  ReliableMaxMessageSize: 298449
-  UnreliableMaxMessageSize: 1199
-  debugLog: 0
-  statisticsGUI: 0
-  statisticsLog: 0
 --- !u!114 &1766148518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2240,10 +2213,11 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   runInBackground: 1
   autoStartServerBuild: 1
-  serverTickRate: 30
+  autoConnectClientBuild: 0
+  sendRate: 30
   offlineScene: Assets/_Scenes/Main.unity
   onlineScene: Assets/_Scenes/Factory.unity
-  transport: {fileID: 1766148517}
+  transport: {fileID: 1766148519}
   networkAddress: localhost
   maxConnections: 100
   authenticator: {fileID: 0}
@@ -2252,6 +2226,33 @@ MonoBehaviour:
   autoCreatePlayer: 0
   playerSpawnMethod: 0
   spawnPrefabs: []
+  snapshotSettings:
+    bufferTimeMultiplier: 2
+    catchupNegativeThreshold: -1
+    catchupPositiveThreshold: 1
+    catchupSpeed: 0.019999999552965164
+    slowdownSpeed: 0.03999999910593033
+    driftEmaDuration: 1
+    dynamicAdjustment: 1
+    dynamicAdjustmentTolerance: 1
+    deliveryTimeEmaDuration: 2
+  timeInterpolationGui: 0
+--- !u!114 &1766148519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766148510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e55fca1f4e4844593a3dd65a3ecb39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Channels: 0200000001000000
+  Timeout: 25
+  AllowSteamRelay: 1
+  UseNextGenSteamNetworking: 1
 --- !u!1 &1844993463
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,20 @@ public class LobbyUIController : MonoBehaviour
 
     public void UpdateStatusText()
     {
-        statusText.SetText($"{lobbyControl.Lobby.Members.Length}/{lobbyControl.Lobby.MaxMembers} Players");
+        switch (lobbyControl.WorkingStatus)
+        {
+            case QuickMatchLobbyControl.Status.Searching:
+                statusText.SetText($"Searching...");
+                break;
+            case QuickMatchLobbyControl.Status.WaitingForStart:
+                statusText.SetText($"{lobbyControl.Lobby.Members.Length}/{lobbyControl.Lobby.MaxMembers} Players Found");
+                break;
+            case QuickMatchLobbyControl.Status.Starting:
+                statusText.SetText($"Match Starting!");
+                break;
+            default:
+                break;
+        }
     }
 
 }
