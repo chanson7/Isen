@@ -31,6 +31,8 @@ public class GameManager : NetworkBehaviour
 
     void GenerateMap(int oldSeed, int newSeed)
     {
+        Debug.Log($"Generating Seed: {newSeed}");
+
         buildPlannerExecutor.Seed = newSeed;
         buildPlannerExecutor.Generate();
     }
@@ -46,7 +48,7 @@ public class GameManager : NetworkBehaviour
         playerSpawnPoints.Add(playerSpawnPointTransform);
     }
 
-    [Server]
+    [Server] //TODO this should probably be in the network manager
     public void SpawnPlayers()
     {
         foreach (var connection in NetworkServer.connections)
@@ -57,7 +59,7 @@ public class GameManager : NetworkBehaviour
             playerSpawnPoints.RemoveAt(randomIndex);
 
             GameObject player = Instantiate(SteamNetworkManager.singleton.playerPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation);
-
+            player.name = $"{SteamNetworkManager.singleton.playerPrefab.name} [connId={connection.Key}]";
             NetworkServer.AddPlayerForConnection(connection.Value, player);
         }
     }

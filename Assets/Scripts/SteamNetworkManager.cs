@@ -2,6 +2,7 @@ using System;
 using Mirror;
 using UnityEngine;
 using HeathenEngineering.SteamworksIntegration;
+using Mirror.FizzySteam;
 
 /*
 	Documentation: https://mirror-networking.gitbook.io/docs/components/network-manager
@@ -13,7 +14,6 @@ public class SteamNetworkManager : NetworkManager
     // Overrides the base singleton so we don't
     // have to cast to this type everywhere.
     public static new SteamNetworkManager singleton { get; private set; }
-    LobbyData lobbyData;
 
     #region Unity Callbacks
 
@@ -59,12 +59,28 @@ public class SteamNetworkManager : NetworkManager
 
     #endregion
 
-    #region Custom
+    #region Steam
 
-    public void StartQuickMatch(LobbyData lobby)
+    public void StartSteamQuickMatch(LobbyData lobby)
     {
         if (lobby.IsOwner)
+        {
+            Debug.Log($"Starting the Host");
+
+            lobby.SetJoinable(false);
+            lobby.SetGameServer();
             StartHost();
+        }
+    }
+
+    public void JoinSteamQuickMatch(LobbyGameServer gameServer)
+    {
+        if (transport.GetType() != typeof(FizzySteamworks))
+            return;
+
+        Debug.Log($"Joining Game Server {gameServer.id.ToString()}");
+        networkAddress = gameServer.id.ToString();
+        StartClient();
     }
 
     #endregion
@@ -151,6 +167,8 @@ public class SteamNetworkManager : NetworkManager
     /// <param name="conn">Connection from client.</param>
     public override void OnServerReady(NetworkConnectionToClient conn)
     {
+        Debug.Log($"Client {conn} is ready to play!");
+
         base.OnServerReady(conn);
     }
 
@@ -161,7 +179,7 @@ public class SteamNetworkManager : NetworkManager
     /// <param name="conn">Connection from client.</param>
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
-        base.OnServerAddPlayer(conn);
+        // base.OnServerAddPlayer(conn);
     }
 
     /// <summary>
@@ -184,7 +202,12 @@ public class SteamNetworkManager : NetworkManager
     /// </summary>
     public override void OnClientConnect()
     {
-        base.OnClientConnect();
+        if (!NetworkClient.ready)
+            NetworkClient.Ready();
+
+        NetworkClient.AddPlayer();
+
+        Debug.Log($"Client {NetworkClient.connection.connectionId} -> Server: 'I'm ready!'");
     }
 
     /// <summary>

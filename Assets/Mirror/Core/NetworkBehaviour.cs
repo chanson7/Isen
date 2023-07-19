@@ -303,7 +303,7 @@ namespace Mirror
 
 #if UNITY_EDITOR
             if (GetComponent<NetworkIdentity>() == null &&
-#if UNITY_2020_3_OR_NEWER
+#if UNITY_2021_OR_NEWER
                 GetComponentInParent<NetworkIdentity>(true) == null)
 #else
                 GetComponentInParent<NetworkIdentity>() == null)
@@ -1351,5 +1351,10 @@ namespace Mirror
 
         /// <summary>Stop event, only called for objects the client has authority over.</summary>
         public virtual void OnStopAuthority() {}
+
+        // Weaver injects this into inheriting classes to return true.
+        // allows runtime & tests to check if a type was weaved.
+        [EditorBrowsable(EditorBrowsableState.Never)]
+        public virtual bool Weaved() => false;
     }
 }

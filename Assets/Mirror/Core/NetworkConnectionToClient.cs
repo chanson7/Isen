@@ -80,6 +80,7 @@ namespace Mirror
             // insert into the server buffer & initialize / adjust / catchup
             SnapshotInterpolation.InsertAndAdjust(
                 snapshots,
+                NetworkClient.snapshotSettings.bufferLimit,
                 snapshot,
                 ref remoteTimeline,
                 ref remoteTimescale,
@@ -129,7 +130,10 @@ namespace Mirror
         {
             // calculate buffer limit. we can only fit so much into a message.
             // max - message header - WriteArraySegment size header - batch header
-            int bufferLimit = maxMessageSize - NetworkMessages.IdSize - sizeof(int) - Batcher.HeaderSize;
+            int bufferLimit = maxMessageSize
+                              - NetworkMessages.IdSize
+                              - sizeof(int)
+                              - Batcher.MaxMessageOverhead(maxMessageSize);
 
             // remember previous valid position
             int before = buffer.Position;
@@ -244,7 +248,12 @@ namespace Mirror
             {
                 if (netIdentity != null)
                 {
-                    NetworkServer.Destroy(netIdentity.gameObject);
+                    // unspawn scene objects, destroy instantiated objects.
+                    // fixes: https://github.com/MirrorNetworking/Mirror/issues/3538
+                    if (netIdentity.sceneId != 0) 
+                        NetworkServer.UnSpawn(netIdentity.gameObject);
+                    else
+                        NetworkServer.Destroy(netIdentity.gameObject);
                 }
             }
 

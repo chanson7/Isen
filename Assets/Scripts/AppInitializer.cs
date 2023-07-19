@@ -4,7 +4,7 @@ using UnityEngine;
 public class AppInitializer : MonoBehaviour
 {
 
-    void Start()
+    public void LoadMainScene()
     {
         SceneManager.LoadScene("Main");
     }
