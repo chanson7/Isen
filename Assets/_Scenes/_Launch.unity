@@ -168,18 +168,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 8f5ac8c1cdf05e64dbbf4c31c5c0439a, type: 2}
-        m_TargetAssemblyTypeName: ApplicationSettingsManager, Assembly-CSharp
-        m_MethodName: ApplyApplicationSettings
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1150552898}
         m_TargetAssemblyTypeName: AppInitializer, Assembly-CSharp
         m_MethodName: LoadMainScene

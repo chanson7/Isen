@@ -7,11 +7,11 @@ public class GameManager : NetworkBehaviour
 {
 
     public static GameManager singleton { get; private set; }
-    const int SEED_RANGE = 9999;
     [SerializeField] BuildPlannerExecutor buildPlannerExecutor;
     GameState gameState;
     List<Transform> playerSpawnPoints = new List<Transform>();
-    [SyncVar(hook = nameof(GenerateMap))] int randomSeed;
+    [SerializeField] GameObject heroPrefab;
+    [SerializeField] GameObject mannequinPrefab;
 
     private void Awake()
     {
@@ -25,16 +25,6 @@ public class GameManager : NetworkBehaviour
     public override void OnStartServer()
     {
         gameState.SetState(GameState.EGameState.Loading);
-
-        randomSeed = Random.Range(-SEED_RANGE, SEED_RANGE);
-    }
-
-    void GenerateMap(int oldSeed, int newSeed)
-    {
-        Debug.Log($"Generating Seed: {newSeed}");
-
-        buildPlannerExecutor.Seed = newSeed;
-        buildPlannerExecutor.Generate();
     }
 
     public void OnMapGenerated()
@@ -48,7 +38,7 @@ public class GameManager : NetworkBehaviour
         playerSpawnPoints.Add(playerSpawnPointTransform);
     }
 
-    [Server] //TODO this should probably be in the network manager
+    [Server]
     public void SpawnPlayers()
     {
         foreach (var connection in NetworkServer.connections)
@@ -58,9 +48,10 @@ public class GameManager : NetworkBehaviour
 
             playerSpawnPoints.RemoveAt(randomIndex);
 
-            GameObject player = Instantiate(SteamNetworkManager.singleton.playerPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation);
-            player.name = $"{SteamNetworkManager.singleton.playerPrefab.name} [connId={connection.Key}]";
-            NetworkServer.AddPlayerForConnection(connection.Value, player);
+            GameObject player = Instantiate(heroPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation);
+            player.name = $"{heroPrefab.name} Player [connId={connection.Key}]";
+
+            NetworkServer.ReplacePlayerForConnection(connection.Value, player);
         }
     }
 

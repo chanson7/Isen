@@ -8,11 +8,11 @@ public class GameManagerEditor : Editor
     {
         DrawDefaultInspector();
 
-        GameManager myScript = (GameManager)target;
+        GameManager gm = (GameManager)target;
 
         if (GUILayout.Button("Spawn Players"))
         {
-            myScript.SpawnPlayers();
+            gm.SpawnPlayers();
         }
     }
 }

@@ -6,9 +6,9 @@ public class FirstPersonCharacterController : MonoBehaviour
 {
 
     [Header("Character Controller Settings")]
-    public float acceleration = 10.0f;
-    public float braking = 10.0f;
-    public float maxSpeed = 5f;
+    public float acceleration;
+    public float braking;
+    public float maxSpeed;
 
     Vector3 movementDirection;
     CharacterController controller;
@@ -43,6 +43,6 @@ public class FirstPersonCharacterController : MonoBehaviour
 
         movementValue.y += Physics.gravity.y * Time.deltaTime;
 
-        controller.Move(movementValue);
+        controller.Move(transform.TransformDirection(movementValue));
     }
 }

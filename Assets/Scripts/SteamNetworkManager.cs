@@ -14,6 +14,7 @@ public class SteamNetworkManager : NetworkManager
     // Overrides the base singleton so we don't
     // have to cast to this type everywhere.
     public static new SteamNetworkManager singleton { get; private set; }
+    LobbyData lobby;
 
     #region Unity Callbacks
 
@@ -69,6 +70,8 @@ public class SteamNetworkManager : NetworkManager
 
             lobby.SetJoinable(false);
             lobby.SetGameServer();
+
+            this.lobby = lobby;
             StartHost();
         }
     }
@@ -167,8 +170,6 @@ public class SteamNetworkManager : NetworkManager
     /// <param name="conn">Connection from client.</param>
     public override void OnServerReady(NetworkConnectionToClient conn)
     {
-        Debug.Log($"Client {conn} is ready to play!");
-
         base.OnServerReady(conn);
     }
 
@@ -179,7 +180,7 @@ public class SteamNetworkManager : NetworkManager
     /// <param name="conn">Connection from client.</param>
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
-        // base.OnServerAddPlayer(conn);
+        base.OnServerAddPlayer(conn);
     }
 
     /// <summary>
@@ -207,7 +208,7 @@ public class SteamNetworkManager : NetworkManager
 
         NetworkClient.AddPlayer();
 
-        Debug.Log($"Client {NetworkClient.connection.connectionId} -> Server: 'I'm ready!'");
+        Debug.Log($"Client {NetworkClient.connection.connectionId} -> Server: 'Add me to the server!'");
     }
 
     /// <summary>

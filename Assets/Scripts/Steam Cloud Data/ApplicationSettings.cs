@@ -4,4 +4,5 @@ using UnityEngine;
 public struct ApplicationSettings
 {
     public FullScreenMode fullScreenMode;
+
 }
