@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEditor;
-using HeathenEngineering.SteamworksIntegration;
 using kcp2k;
 using Mirror;
 

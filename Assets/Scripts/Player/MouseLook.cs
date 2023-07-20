@@ -7,8 +7,10 @@ public class MouseLook : MonoBehaviour
 {
     Vector2 mouseDelta;
     float xRotation = 0f;
-    [SerializeField] float mouseSensitivity;
-    [SerializeField] Transform cameraFollow;
+    [SerializeField] float xMin;
+    [SerializeField] float xMax;
+    public float mouseSensitivity;
+    [SerializeField] Transform cameraTarget;
 
     private void Start()
     {
@@ -24,9 +26,9 @@ public class MouseLook : MonoBehaviour
     void Update()
     {
         xRotation -= mouseDelta.y;
-        xRotation = Mathf.Clamp(xRotation, -90f, 70f);
+        xRotation = Mathf.Clamp(xRotation, xMin, xMax);
 
-        cameraFollow.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        cameraTarget.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up, mouseDelta.x);
     }
 }

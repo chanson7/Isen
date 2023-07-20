@@ -107,7 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7652490681474211660}
   m_Layer: 0
-  m_Name: Camera Follow
+  m_Name: Camera Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1156,10 +1156,13 @@ GameObject:
   - component: {fileID: 3538957614092296981}
   - component: {fileID: -1983762800784101081}
   - component: {fileID: 1587240085670180425}
+  - component: {fileID: 6608300220844445276}
   - component: {fileID: 7211242972486522325}
   - component: {fileID: 724579806643771233}
   - component: {fileID: 1608249896220235113}
   - component: {fileID: 6453832366935844702}
+  - component: {fileID: 9079207366188233971}
+  - component: {fileID: 8764741679543963759}
   m_Layer: 0
   m_Name: Mannequin Player
   m_TagString: Untagged
@@ -1232,7 +1235,22 @@ MonoBehaviour:
   syncInterval: 0
   thirdPersonVcam: {fileID: 5319602476891466067, guid: c65e2aafb2aac6a43a66209e43a371b1,
     type: 3}
-  cameraFollow: {fileID: 7652490681474211660}
+  cameraTarget: {fileID: 7652490681474211660}
+--- !u!114 &6608300220844445276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908637372374807870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd619ce44abe3e84faa740d2efcb7503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 10
+  braking: 5
+  maxSpeed: 5
 --- !u!143 &7211242972486522325
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1325,6 +1343,35 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   clientAuthority: 1
+  animator: {fileID: 5620427143877557443}
+--- !u!114 &9079207366188233971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908637372374807870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6fd0064812531a4f95f75bda74bab4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xMin: -10
+  xMax: 10
+  mouseSensitivity: 50
+  cameraTarget: {fileID: 7652490681474211660}
+--- !u!114 &8764741679543963759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4908637372374807870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 931c550dad477914b9653c7b141657f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   animator: {fileID: 5620427143877557443}
 --- !u!1 &4908649427436446656
 GameObject:

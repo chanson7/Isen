@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7652490681474211660}
   m_Layer: 0
-  m_Name: Camera Follow
+  m_Name: Camera Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1710,8 +1710,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6fd0064812531a4f95f75bda74bab4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xMin: -90
+  xMax: 45
   mouseSensitivity: 80
-  cameraFollow: {fileID: 7652490681474211660}
+  cameraTarget: {fileID: 0}
 --- !u!114 &724579806643771233
 MonoBehaviour:
   m_ObjectHideFlags: 0
