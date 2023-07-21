@@ -48,8 +48,8 @@ public class GameManager : NetworkBehaviour
 
             playerSpawnPoints.RemoveAt(randomIndex);
 
-            GameObject player = Instantiate(mannequinPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation);
-            player.name = $"{mannequinPrefab.name} Player [connId={connection.Key}]";
+            GameObject player = Instantiate(heroPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation);
+            player.name = $"{heroPrefab.name} Player [connId={connection.Key}]";
 
             NetworkServer.ReplacePlayerForConnection(connection.Value, player);
         }

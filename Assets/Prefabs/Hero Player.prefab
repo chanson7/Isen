@@ -1713,7 +1713,7 @@ MonoBehaviour:
   xMin: -90
   xMax: 45
   mouseSensitivity: 80
-  cameraTarget: {fileID: 0}
+  cameraTarget: {fileID: 7652490681474211660}
 --- !u!114 &724579806643771233
 MonoBehaviour:
   m_ObjectHideFlags: 0
