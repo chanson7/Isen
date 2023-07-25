@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/Main.unity
     guid: aba30d0d4dcc1864fbe77c0b58714f51
   - enabled: 1
-    path: Assets/_Scenes/Factory.unity
+    path: Assets/_Scenes/Mannequin_Warehouse.unity
     guid: 03977e3ae6cb1854e8591170fe4372a1
   m_configObjects: {}

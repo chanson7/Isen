@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    Vector2 mouseDelta;
-    float xRotation = 0f;
-    [SerializeField] float xMin;
-    [SerializeField] float xMax;
+    protected Vector2 mouseDelta;
+    protected float xRotation = 0f;
+    [SerializeField] protected Transform cameraTarget;
     public float mouseSensitivity;
-    [SerializeField] Transform cameraTarget;
+    [SerializeField] protected float xMin;
+    [SerializeField] protected float xMax;
 
     private void Start()
     {
@@ -24,6 +24,11 @@ public class MouseLook : MonoBehaviour
     }
 
     void Update()
+    {
+        DoRotate();
+    }
+
+    public virtual void DoRotate()
     {
         xRotation -= mouseDelta.y;
         xRotation = Mathf.Clamp(xRotation, xMin, xMax);

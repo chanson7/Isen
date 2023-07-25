@@ -3687,7 +3687,7 @@ MonoBehaviour:
   autoConnectClientBuild: 0
   sendRate: 30
   offlineScene: Assets/_Scenes/Main.unity
-  onlineScene: Assets/_Scenes/Factory.unity
+  onlineScene: Assets/_Scenes/Mannequin_Warehouse.unity
   transport: {fileID: 1766148519}
   networkAddress: localhost
   maxConnections: 100
@@ -3698,7 +3698,7 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 4908637372374807870, guid: b6aff498318530548846ca11825c3d98, type: 3}
-  - {fileID: 4908637372374807870, guid: 91c0aba1a309e0e4bb4330f3e6f203f8, type: 3}
+  - {fileID: 5082118526173675251, guid: a01875303799d93499ed3ff86f661058, type: 3}
   snapshotSettings:
     bufferTimeMultiplier: 2
     bufferLimit: 32

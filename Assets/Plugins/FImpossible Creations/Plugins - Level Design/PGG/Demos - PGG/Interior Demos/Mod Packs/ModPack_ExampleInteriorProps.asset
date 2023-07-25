@@ -436,7 +436,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 3cd6526c867e0504db77d458fba251f7, type: 2}
+  ParentPreset: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &-7104649164169896130
 MonoBehaviour:
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: Cardbox floor debris
   m_EditorClassIdentifier: 
   TemporaryContainer: {fileID: 0}
-  Enabled: 1
+  Enabled: 0
   ModTag: FProp,CBFProp
   DrawMeshAndBox: 0
   Combine: 0
@@ -535,7 +535,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 3cd6526c867e0504db77d458fba251f7, type: 2}
+  ParentPreset: {fileID: 11400000, guid: 04321e34df64d8042bf5580bf76d0468, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &-6923816223132088914
 MonoBehaviour:
@@ -597,7 +597,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Tag: DestrWall
   CheckMode: 0
@@ -677,7 +677,7 @@ MonoBehaviour:
     _refCol: {fileID: 0}
   DrawMultiObjectStamps: 1
   Spawners:
-  - Enabled: 1
+  - Enabled: 0
     Name: CeilingLight
     SpawnerTag: 
     StampPrefabID: 0
@@ -734,7 +734,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 3cd6526c867e0504db77d458fba251f7, type: 2}
+  ParentPreset: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &-6255472489805795480
 MonoBehaviour:
@@ -882,7 +882,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 3cd6526c867e0504db77d458fba251f7, type: 2}
+  ParentPreset: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &-6075780149033145639
 MonoBehaviour:
@@ -902,7 +902,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.237
   PropabilityMulVariable:
@@ -1367,7 +1367,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 3cd6526c867e0504db77d458fba251f7, type: 2}
+  ParentPreset: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &-3871266082098350306
 MonoBehaviour:
@@ -1707,7 +1707,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Propability: 0.437
   PropabilityMulVariable:
@@ -1840,7 +1840,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.265
   PropabilityMulVariable:
@@ -2282,7 +2282,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 3cd6526c867e0504db77d458fba251f7, type: 2}
+  ParentPreset: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &977562816067111069
 MonoBehaviour:
@@ -2302,7 +2302,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -2447,7 +2447,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 3cd6526c867e0504db77d458fba251f7, type: 2}
+  ParentPreset: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &1398512921419020282
 MonoBehaviour:
@@ -2657,7 +2657,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Tag: Prop,sProp
   CheckMode: 0
@@ -2722,7 +2722,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Count:
     Min: 1
@@ -3011,7 +3011,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   CheckedCellsMustBe: 1
   NeightbourNeeds: 0
@@ -3110,7 +3110,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -3435,7 +3435,7 @@ MonoBehaviour:
   m_Name: Floor Cables Prop
   m_EditorClassIdentifier: 
   TemporaryContainer: {fileID: 0}
-  Enabled: 1
+  Enabled: 0
   ModTag: PrpCabl,FProp
   DrawMeshAndBox: 0
   Combine: 0
@@ -3494,7 +3494,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 3cd6526c867e0504db77d458fba251f7, type: 2}
+  ParentPreset: {fileID: 11400000, guid: 04321e34df64d8042bf5580bf76d0468, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &6990836390581781409
 MonoBehaviour:
@@ -3594,7 +3594,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 3cd6526c867e0504db77d458fba251f7, type: 2}
+  ParentPreset: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &7509062950889589105
 MonoBehaviour:
@@ -3614,7 +3614,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.414
   PropabilityMulVariable:
@@ -3639,7 +3639,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -3773,7 +3773,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.566
   PropabilityMulVariable:
@@ -3954,7 +3954,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}

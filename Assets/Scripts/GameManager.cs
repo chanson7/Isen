@@ -10,8 +10,8 @@ public class GameManager : NetworkBehaviour
     [SerializeField] BuildPlannerExecutor buildPlannerExecutor;
     GameState gameState;
     List<Transform> playerSpawnPoints = new List<Transform>();
-    [SerializeField] GameObject heroPrefab;
-    [SerializeField] GameObject mannequinPrefab;
+    [SerializeField] GameObject heroPlayerPrefab;
+    [SerializeField] GameObject mannequinPlayerPrefab;
 
     private void Awake()
     {
@@ -41,17 +41,20 @@ public class GameManager : NetworkBehaviour
     [Server]
     public void SpawnPlayers()
     {
-        foreach (var connection in NetworkServer.connections)
+
+        if (NetworkServer.connections.Count > 0)
         {
-            var randomIndex = Random.Range(0, playerSpawnPoints.Count);
-            Transform playerSpawnTransform = playerSpawnPoints[randomIndex];
+            foreach (var connection in NetworkServer.connections)
+            {
+                var randomIndex = Random.Range(0, playerSpawnPoints.Count);
+                Transform playerSpawnTransform = playerSpawnPoints[randomIndex];
 
-            playerSpawnPoints.RemoveAt(randomIndex);
+                playerSpawnPoints.RemoveAt(randomIndex);
 
-            GameObject player = Instantiate(heroPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation);
-            player.name = $"{heroPrefab.name} Player [connId={connection.Key}]";
+                GameObject player = Instantiate(mannequinPlayerPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation);
 
-            NetworkServer.ReplacePlayerForConnection(connection.Value, player);
+                NetworkServer.ReplacePlayerForConnection(connection.Value, player);
+            }
         }
     }
 
