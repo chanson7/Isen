@@ -21,9 +21,12 @@ public class MannequinMouseLook : MouseLook
     {
         if (isMoving)
         {
-            cameraTarget.localRotation = Quaternion.identity;
-            yRotation = 0f;
-            base.DoRotate();
+            xRotation -= mouseDelta.y;
+            xRotation = Mathf.Clamp(xRotation, xMin, xMax);
+
+            cameraTarget.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
+            transform.Rotate(Vector3.up, mouseDelta.x);
+
         }
         else
         {

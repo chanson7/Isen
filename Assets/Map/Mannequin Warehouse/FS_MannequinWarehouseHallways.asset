@@ -180,7 +180,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -533,7 +533,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.175
   PropabilityMulVariable:
@@ -836,7 +836,7 @@ MonoBehaviour:
   _editor_drawSpawners: 1
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
-  _editor_shareSelected: 0
+  _editor_shareSelected: 1
   ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &-3503805758104606995
@@ -1626,7 +1626,6 @@ MonoBehaviour:
   SelfInjections: []
   disabledMods:
   - {fileID: -2925440260325766704, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: 7068911637912187695}
   - {fileID: 0}
   - {fileID: -7019258575112548385, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
   - {fileID: -4211052369908908318, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
@@ -1868,7 +1867,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   replaceOnTag: 
   CheckMode: 0
@@ -1897,7 +1896,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   CheckedCellsMustBe: 1
   NeightbourNeeds: 0
@@ -2516,7 +2515,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   CheckedCellsMustBe: 1
   NeightbourNeeds: 0
@@ -2659,7 +2658,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 0}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &7186734729403622876
 MonoBehaviour:
@@ -3048,7 +3047,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.65
   PropabilityMulVariable:
@@ -3182,7 +3181,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}

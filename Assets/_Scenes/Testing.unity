@@ -3205,7 +3205,7 @@ ReflectionProbe:
   m_UpdateFrequency: 0
   m_BoxSize: {x: 13.008825, y: 4.466189, z: 8.470601}
   m_BoxOffset: {x: 0, y: 0, z: 0}
-  m_NearClip: 0.005
+  m_NearClip: 0.01
   m_FarClip: 1000
   m_ShadowDistance: 100
   m_ClearFlags: 2

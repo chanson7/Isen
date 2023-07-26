@@ -207,11 +207,13 @@ MonoBehaviour:
   PrefabsList:
   - Prefab: {fileID: 4908637372374807870, guid: 8f137ebf5d9390948b9632a9c6026313,
       type: 3}
-    MainCollider: {fileID: 0}
+    MainCollider: {fileID: 8013293142791671821, guid: 8f137ebf5d9390948b9632a9c6026313,
+      type: 3}
     subID: 0
     _refMesh: {fileID: 1452673609854614013, guid: 58c1cfc82f0f5484e9692e1db76f6103,
       type: 3}
-    _refCol: {fileID: 0}
+    _refCol: {fileID: 8013293142791671821, guid: 8f137ebf5d9390948b9632a9c6026313,
+      type: 3}
   DrawMultiObjectStamps: 1
   Spawners:
   - Enabled: 1
@@ -246,7 +248,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 04321e34df64d8042bf5580bf76d0468, type: 2}
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: 11400000}
 --- !u!114 &-6800906181136374890
 MonoBehaviour:
@@ -319,7 +321,7 @@ MonoBehaviour:
     _refCol: {fileID: 0}
   DrawMultiObjectStamps: 1
   Spawners:
-  - Enabled: 0
+  - Enabled: 1
     Name: CeilingLight
     SpawnerTag: 
     StampPrefabID: 0
@@ -376,7 +378,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 04321e34df64d8042bf5580bf76d0468, type: 2}
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: 11400000}
 --- !u!114 &-6255472489805795480
 MonoBehaviour:
@@ -1197,7 +1199,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -1391,7 +1393,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   CheckedCellsMustBe: 2
   NeightbourNeeds: 1
