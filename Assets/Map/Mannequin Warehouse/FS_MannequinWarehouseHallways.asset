@@ -603,7 +603,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000}
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &-4598475365633284732
 MonoBehaviour:
@@ -837,7 +837,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 1
-  ParentPreset: {fileID: 11400000}
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &-3503805758104606995
 MonoBehaviour:
@@ -1274,7 +1274,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000}
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &-1325148686279620251
 MonoBehaviour:
@@ -1626,7 +1626,6 @@ MonoBehaviour:
   SelfInjections: []
   disabledMods:
   - {fileID: -2925440260325766704, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: 0}
   - {fileID: -7019258575112548385, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
   - {fileID: -4211052369908908318, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
   - {fileID: 1076852388431377131, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
@@ -1638,7 +1637,6 @@ MonoBehaviour:
   - {fileID: 6921288919283922783, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
   - {fileID: -7019258575112548385, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
   - {fileID: -4211052369908908318, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
-  - {fileID: 0}
   - {fileID: 1076852388431377131, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
   - {fileID: -7159157248221465641, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
   - {fileID: -6163071984533231416, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
@@ -1867,7 +1865,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   replaceOnTag: 
   CheckMode: 0
@@ -2102,7 +2100,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -2658,7 +2656,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000}
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &7186734729403622876
 MonoBehaviour:
@@ -2917,7 +2915,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000}
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &7452340942081878139
 MonoBehaviour:
@@ -3047,7 +3045,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Propability: 0.65
   PropabilityMulVariable:

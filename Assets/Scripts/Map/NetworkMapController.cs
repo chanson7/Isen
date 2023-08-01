@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FIMSpace.Generating;
 using Mirror;
@@ -7,7 +5,9 @@ using Mirror;
 public class NetworkMapController : NetworkBehaviour
 {
     BuildPlannerExecutor buildPlannerExecutor;
-    [SyncVar(hook = nameof(GenerateMap))] int randomSeed;
+    [SerializeField] ScriptableEvent randomSeedSetEvent;
+    [SerializeField] MapData mapData;
+    [SyncVar(hook = nameof(OnRandomSeedSet))] public int randomSeed;
     const int SEED_RANGE = 9999;
 
     private void Awake()
@@ -20,11 +20,17 @@ public class NetworkMapController : NetworkBehaviour
         randomSeed = Random.Range(-SEED_RANGE, SEED_RANGE);
     }
 
-    void GenerateMap(int oldSeed, int newSeed)
+    void OnRandomSeedSet(int oldSeed, int newSeed)
     {
-        Debug.Log($"Generating map with seed: {newSeed}");
+        mapData.randomSeed = newSeed;
+        randomSeedSetEvent.Raise();
+    }
 
-        buildPlannerExecutor.Seed = newSeed;
+    public void GenerateMap()
+    {
+        Debug.Log($"Generating map with seed: {randomSeed}");
+
+        buildPlannerExecutor.Seed = randomSeed;
         buildPlannerExecutor.Generate();
     }
 }

@@ -135,7 +135,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -248,7 +248,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 0}
+  ParentPreset: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &-6800906181136374890
 MonoBehaviour:
@@ -378,7 +378,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 0}
+  ParentPreset: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &-6255472489805795480
 MonoBehaviour:
@@ -745,7 +745,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -865,14 +865,34 @@ MonoBehaviour:
   ModPackType: 0
   TagForAllSpawners: 
   CombineSpawns: 0
-  Variables: []
+  Variables:
+  - Name: Variable 0
+    v3Val: {x: 1, y: 0, z: 0}
+    colVal: {r: 0, g: 0, b: 0, a: 0}
+    str: 
+    mat: {fileID: 0}
+    gameObj: {fileID: 0}
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    unityObj: {fileID: 0}
+    helper: {x: 0, y: 0, z: 0}
+    additionalHelperRef: {fileID: 0}
+    ValueType: 1
+    helpForFieldCommand: 1
+    displayOnScene: 0
+    allowTransformFollow: 0
+    FloatSwitch: 1
   CallOnAllMod: {fileID: 4470354199957224959}
   CallOnAllSpawners:
-    Enabled: 0
+    Enabled: 1
     Name: 
     SpawnerTag: 
     StampPrefabID: 0
-    Parent: {fileID: 0}
+    Parent: {fileID: 4470354199957224959}
     Rules: []
     Mode: 0
     CellCheckMode: 0
@@ -889,7 +909,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 0
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  _EditorDisplayCallOnAll: 0
+  _EditorDisplayCallOnAll: 1
 --- !u!114 &175445376467824476
 MonoBehaviour:
   m_ObjectHideFlags: 0
