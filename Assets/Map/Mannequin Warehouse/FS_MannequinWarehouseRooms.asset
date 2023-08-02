@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: Root
   m_EditorClassIdentifier: 
   FieldModificators:
+  - {fileID: 11400000, guid: 9a68c77128ede7949b1d9b9240c7a131, type: 2}
   - {fileID: -4732108533949608611}
   - {fileID: -1473594173213036481}
   - {fileID: 7393589115315746936}
@@ -180,7 +181,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -296,7 +297,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.305
   PropabilityMulVariable:
@@ -380,6 +381,40 @@ MonoBehaviour:
   MaxDegreesSteps: {x: 1, y: 90, z: 1}
   LocalRotation: 0
   OverrideRotation: 1
+--- !u!114 &-6826029426710364373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
+  m_Name: New Modificator
+  m_EditorClassIdentifier: 
+  TemporaryContainer: {fileID: 0}
+  Enabled: 1
+  ModTag: 
+  DrawMeshAndBox: 0
+  Combine: 0
+  RunEmittersIfContains: 0
+  DrawSetupFor: 0
+  OStamp: {fileID: 0}
+  DrawObjectStamps: 1
+  OMultiStamp: {fileID: 0}
+  PrefabsList: []
+  DrawMultiObjectStamps: 1
+  Spawners: []
+  SubSpawners: []
+  VariantOf: {fileID: 0}
+  _editor_drawStamp: 1
+  _editor_drawSpawners: 1
+  _editor_drawGlobalRules: 0
+  _editor_drawModPackRules: 0
+  _editor_shareSelected: 0
+  ParentPreset: {fileID: 11400000}
+  ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &-6591627528886960402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,6 +874,40 @@ MonoBehaviour:
   _editor_shareSelected: 0
   ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -7913814128861270479}
+--- !u!114 &-4005888928143019423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
+  m_Name: New Modificator
+  m_EditorClassIdentifier: 
+  TemporaryContainer: {fileID: 0}
+  Enabled: 1
+  ModTag: 
+  DrawMeshAndBox: 0
+  Combine: 0
+  RunEmittersIfContains: 0
+  DrawSetupFor: 0
+  OStamp: {fileID: 0}
+  DrawObjectStamps: 1
+  OMultiStamp: {fileID: 0}
+  PrefabsList: []
+  DrawMultiObjectStamps: 1
+  Spawners: []
+  SubSpawners: []
+  VariantOf: {fileID: 0}
+  _editor_drawStamp: 1
+  _editor_drawSpawners: 1
+  _editor_drawGlobalRules: 0
+  _editor_drawModPackRules: 0
+  _editor_shareSelected: 0
+  ParentPreset: {fileID: 11400000}
+  ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &-3503805758104606995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,7 +1053,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Propability: 0.175
   PropabilityMulVariable:
@@ -1327,7 +1396,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Tag: Cables
   CheckMode: 0
@@ -1626,13 +1695,6 @@ MonoBehaviour:
   SelfInjections: []
   disabledMods:
   - {fileID: -2925440260325766704, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   CustomPostEvents: []
   AddReflectionProbes: 1
   MainReflectionSettings: {fileID: 11400000, guid: dabe448206028124294db7edb02eed3f,
@@ -1885,7 +1947,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   CheckedCellsMustBe: 1
   NeightbourNeeds: 0
@@ -3070,7 +3132,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Propability: 0.65
   PropabilityMulVariable:

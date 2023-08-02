@@ -7,7 +7,7 @@ public class NetworkMapController : NetworkBehaviour
     BuildPlannerExecutor buildPlannerExecutor;
     [SerializeField] ScriptableEvent randomSeedSetEvent;
     [SerializeField] MapData mapData;
-    [SyncVar(hook = nameof(OnRandomSeedSet))] public int randomSeed;
+    [SyncVar(hook = nameof(OnRandomSeedSet))] int randomSeed;
     const int SEED_RANGE = 9999;
 
     private void Awake()

@@ -1131,7 +1131,7 @@ MonoBehaviour:
   _Editor_PreviewingShape: 0
   _Editor_drawInitShape: 1
   _Editor_drawMainVariables: 0
-  _Editor_displaySetup: 0
+  _Editor_displaySetup: 1
   _Editor_topInfoClicked: 1
   generatedGenerators: []
   generatedPainters: []
@@ -1168,7 +1168,6 @@ MonoBehaviour:
   syncInterval: 0
   randomSeedSetEvent: {fileID: 11400000, guid: f03063fbcfe98e04a95784cfbc1e4d15, type: 2}
   mapData: {fileID: 11400000, guid: 8250f3e06ddda0c4ebce3462e8c30cb4, type: 2}
-  randomSeed: 0
 --- !u!114 &322208119
 MonoBehaviour:
   m_ObjectHideFlags: 0

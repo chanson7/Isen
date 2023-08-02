@@ -346,7 +346,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  - Enabled: 1
+  - Enabled: 0
     Name: WallLight
     SpawnerTag: WallLight
     StampPrefabID: 1
@@ -377,7 +377,7 @@ MonoBehaviour:
   _editor_drawSpawners: 1
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
-  _editor_shareSelected: 0
+  _editor_shareSelected: 1
   ParentPreset: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
   ParentPack: {fileID: 11400000}
 --- !u!114 &-6255472489805795480
@@ -855,7 +855,6 @@ MonoBehaviour:
   m_Name: ModPack_RoomInteriorProps
   m_EditorClassIdentifier: 
   FieldModificators:
-  - {fileID: 11400000, guid: 9a68c77128ede7949b1d9b9240c7a131, type: 2}
   - {fileID: -7019258575112548385}
   - {fileID: -6555750166738775983}
   ParentPreset: {fileID: 0}
@@ -1456,7 +1455,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   CheckedCellsMustBe: 2
   NeightbourNeeds: 1

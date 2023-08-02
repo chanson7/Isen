@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MannequinMovementAnimation : MonoBehaviour
+public class MannequinAnimationController : MonoBehaviour
 {
     [SerializeField] Animator animator;
 
@@ -10,6 +10,11 @@ public class MannequinMovementAnimation : MonoBehaviour
         animator.SetBool("isMoving", input.Get<Vector2>().magnitude > 0 ? true : false);
         animator.SetFloat("right", input.Get<Vector2>().x);
         animator.SetFloat("forward", input.Get<Vector2>().y);
+    }
+
+    public void RandomizePose()
+    {
+
     }
 
 }

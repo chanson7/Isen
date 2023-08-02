@@ -1393,7 +1393,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   CheckedCellsMustBe: 2
   NeightbourNeeds: 1

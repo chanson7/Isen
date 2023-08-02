@@ -138,7 +138,7 @@ MonoBehaviour:
   TagForAllSpawners: 
   CombineSpawns: 0
   Variables: []
-  CallOnAllMod: {fileID: 0}
+  CallOnAllMod: {fileID: 6781556895402737525}
   CallOnAllSpawners:
     Enabled: 0
     Name: 
@@ -180,7 +180,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -296,7 +296,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.305
   PropabilityMulVariable:
@@ -603,7 +603,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000}
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &-4598475365633284732
 MonoBehaviour:
@@ -836,8 +836,8 @@ MonoBehaviour:
   _editor_drawSpawners: 1
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
-  _editor_shareSelected: 1
-  ParentPreset: {fileID: 11400000}
+  _editor_shareSelected: 0
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &-3503805758104606995
 MonoBehaviour:
@@ -1273,8 +1273,8 @@ MonoBehaviour:
   _editor_drawSpawners: 1
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
-  _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000}
+  _editor_shareSelected: 1
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &-1325148686279620251
 MonoBehaviour:
@@ -1327,7 +1327,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Tag: Cables
   CheckMode: 0
@@ -1548,7 +1548,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b6c361108247f045b5087f48c0c7951, type: 3}
-  m_Name: FS_MannequinWarehouseHallways
+  m_Name: FS_MainRoom
   m_EditorClassIdentifier: 
   CellSize: 2
   NonUniformSize: 0
@@ -1620,28 +1620,12 @@ MonoBehaviour:
   UtilityModificators: []
   ModificatorPacks:
   - {fileID: -7913814128861270479}
-  - {fileID: 11400000, guid: d534b3883d4506748894613ceb3dedc9, type: 2}
+  - {fileID: 11400000, guid: e403dd216fa215642b260ecc2ef51377, type: 2}
   Ignores: []
   DontSpawnOn: 
   SelfInjections: []
   disabledMods:
   - {fileID: -2925440260325766704, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: -7019258575112548385, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: -4211052369908908318, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: 1076852388431377131, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: -7159157248221465641, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: -6163071984533231416, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: 923952724925266947, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: 6990836390581781409, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: 6921288919283922783, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
-  - {fileID: 6921288919283922783, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
-  - {fileID: -7019258575112548385, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
-  - {fileID: -4211052369908908318, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
-  - {fileID: 1076852388431377131, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
-  - {fileID: -7159157248221465641, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
-  - {fileID: -6163071984533231416, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
-  - {fileID: 923952724925266947, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
-  - {fileID: -2925440260325766704, guid: dc26309b20362e14e95d0449d6fdd4bb, type: 2}
   CustomPostEvents: []
   AddReflectionProbes: 1
   MainReflectionSettings: {fileID: 11400000, guid: dabe448206028124294db7edb02eed3f,
@@ -2100,7 +2084,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -2495,6 +2479,40 @@ MonoBehaviour:
   DistanceMustBe: 0
   RemoveDistance: 55
   FromOrigin: 0
+--- !u!114 &6781556895402737525
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TemporaryContainer: {fileID: 0}
+  Enabled: 1
+  ModTag: 
+  DrawMeshAndBox: 0
+  Combine: 0
+  RunEmittersIfContains: 0
+  DrawSetupFor: 0
+  OStamp: {fileID: 0}
+  DrawObjectStamps: 1
+  OMultiStamp: {fileID: 0}
+  PrefabsList: []
+  DrawMultiObjectStamps: 1
+  Spawners: []
+  SubSpawners: []
+  VariantOf: {fileID: 0}
+  _editor_drawStamp: 1
+  _editor_drawSpawners: 1
+  _editor_drawGlobalRules: 0
+  _editor_drawModPackRules: 0
+  _editor_shareSelected: 0
+  ParentPreset: {fileID: 11400000}
+  ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &6956844152846606547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2513,7 +2531,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   CheckedCellsMustBe: 1
   NeightbourNeeds: 0
@@ -2606,7 +2624,7 @@ MonoBehaviour:
   m_Name: RoomV4DoorHole
   m_EditorClassIdentifier: 
   TemporaryContainer: {fileID: 0}
-  Enabled: 1
+  Enabled: 0
   ModTag: 
   DrawMeshAndBox: 0
   Combine: 0
@@ -2915,7 +2933,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000}
+  ParentPreset: {fileID: 0}
   ParentPack: {fileID: -7913814128861270479}
 --- !u!114 &7452340942081878139
 MonoBehaviour:
@@ -3179,7 +3197,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
