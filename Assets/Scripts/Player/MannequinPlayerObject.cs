@@ -6,15 +6,15 @@ using Cinemachine;
 public class MannequinPlayerObject : NetworkBehaviour
 {
     [SerializeField] CinemachineVirtualCamera thirdPersonVcam;
-    [SerializeField] Transform cameraTarget;
+    [SerializeField] Transform cameraPivot;
 
     public override void OnStartLocalPlayer()
     {
         this.GetComponent<PlayerInput>().enabled = true;
 
         thirdPersonVcam = Instantiate(thirdPersonVcam);
-        thirdPersonVcam.Follow = cameraTarget;
-        thirdPersonVcam.LookAt = cameraTarget;
+        thirdPersonVcam.Follow = cameraPivot;
+        thirdPersonVcam.LookAt = cameraPivot;
     }
 
 }

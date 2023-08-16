@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1219,358 +1219,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &641415136
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 641415139}
-  - component: {fileID: 641415137}
-  m_Layer: 0
-  m_Name: Build Planner Executor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &641415137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641415136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cf09ae0e4269ee47ad7dc215a34444a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BuildPlannerPreset: {fileID: 11400000, guid: ec850551d36d217439adc8d41af40fd6, type: 2}
-  _plannerPrepare:
-    PlannerVariablesOverrides:
-    - Name: Counter Wall Spawns Ignores
-      v3Val: {x: 1, y: 0, z: 0}
-      colVal: {r: 0, g: 0, b: 0, a: 0}
-      str: 
-      mat: {fileID: 0}
-      gameObj: {fileID: 0}
-      curve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      unityObj: {fileID: 0}
-      helper: {x: 0, y: 0, z: 0}
-      additionalHelperRef: {fileID: 0}
-      ValueType: 8
-      helpForFieldCommand: 0
-      displayOnScene: 0
-      allowTransformFollow: 0
-      FloatSwitch: 0
-    FieldSetupCompositions:
-    - UseComposition: 0
-      Owner: {fileID: 0}
-      OverrideEnabled: 1
-      Prepared: 0
-      Setup: {fileID: 11400000, guid: c62dd48b76c0afc4ab654d459f99e509, type: 2}
-      Injections: []
-      GenType: 1
-      JustModPack: {fileID: 0}
-      JustMod: {fileID: 0}
-      OtherPlanner: {fileID: 0}
-      subSetup: {fileID: 0}
-      FieldSetupVariablesOverrides:
-      - Name: Spawn Propability Multiplier
-        v3Val: {x: 1, y: 0, z: 0}
-        colVal: {r: 0, g: 0, b: 0, a: 0}
-        str: 
-        mat: {fileID: 0}
-        gameObj: {fileID: 0}
-        curve:
-          serializedVersion: 2
-          m_Curve: []
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        unityObj: {fileID: 0}
-        helper: {x: 0, y: 5, z: 0}
-        additionalHelperRef: {fileID: 0}
-        ValueType: 1
-        helpForFieldCommand: 0
-        displayOnScene: 0
-        allowTransformFollow: 0
-        FloatSwitch: 0
-      - Name: Spawn Count Multiplier
-        v3Val: {x: 1, y: 0, z: 0}
-        colVal: {r: 0, g: 0, b: 0, a: 0}
-        str: 
-        mat: {fileID: 0}
-        gameObj: {fileID: 0}
-        curve:
-          serializedVersion: 2
-          m_Curve: []
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        unityObj: {fileID: 0}
-        helper: {x: 0, y: 5, z: 0}
-        additionalHelperRef: {fileID: 0}
-        ValueType: 1
-        helpForFieldCommand: 0
-        displayOnScene: 0
-        allowTransformFollow: 0
-        FloatSwitch: 0
-      FieldPackagesOverrides:
-      - ParentPack: {fileID: -7913814128861270479, guid: c62dd48b76c0afc4ab654d459f99e509,
-          type: 2}
-        SetEnabled: 1
-        PackVariablesOverrides: []
-        PackModsOverrides:
-        - ParentMod: {fileID: -4732108533949608611, guid: c62dd48b76c0afc4ab654d459f99e509,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -1473594173213036481, guid: c62dd48b76c0afc4ab654d459f99e509,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 7393589115315746936, guid: c62dd48b76c0afc4ab654d459f99e509,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -4225742253804519822, guid: c62dd48b76c0afc4ab654d459f99e509,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 7068911637912187695, guid: c62dd48b76c0afc4ab654d459f99e509,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-      - ParentPack: {fileID: 11400000, guid: e403dd216fa215642b260ecc2ef51377, type: 2}
-        SetEnabled: 1
-        PackVariablesOverrides:
-        - Name: Variable 0
-          v3Val: {x: 1, y: 0, z: 0}
-          colVal: {r: 0, g: 0, b: 0, a: 0}
-          str: 
-          mat: {fileID: 0}
-          gameObj: {fileID: 0}
-          curve:
-            serializedVersion: 2
-            m_Curve: []
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
-          unityObj: {fileID: 0}
-          helper: {x: 0, y: 0, z: 0}
-          additionalHelperRef: {fileID: 0}
-          ValueType: 1
-          helpForFieldCommand: 1
-          displayOnScene: 0
-          allowTransformFollow: 0
-          FloatSwitch: 1
-        PackModsOverrides:
-        - ParentMod: {fileID: 11400000, guid: 9a68c77128ede7949b1d9b9240c7a131, type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -7019258575112548385, guid: e403dd216fa215642b260ecc2ef51377,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -6555750166738775983, guid: e403dd216fa215642b260ecc2ef51377,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-      UtilityModsOverrides: []
-      OverrideCellSize: 0
-      OverridingCellSize: {x: 1, y: 1, z: 1}
-      ParentFieldPlanner: {fileID: 3014821584910370675, guid: ec850551d36d217439adc8d41af40fd6,
-        type: 2}
-      PlannerVariablesOverrides:
-      - Name: Door Command
-        v3Val: {x: 1, y: 0, z: 0}
-        colVal: {r: 0, g: 0, b: 0, a: 0}
-        str: 
-        mat: {fileID: 0}
-        gameObj: {fileID: 0}
-        curve:
-          serializedVersion: 2
-          m_Curve: []
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        unityObj: {fileID: 0}
-        helper: {x: 0, y: 0, z: 0}
-        additionalHelperRef: {fileID: 0}
-        ValueType: 1
-        helpForFieldCommand: 1
-        displayOnScene: 0
-        allowTransformFollow: 0
-        FloatSwitch: 1
-      InitShapes:
-      - {fileID: 948378904}
-      Instances: 1
-    UseDuplicatesOverrides: 00
-    DuplicatesOverrides:
-    - DuplicatesCompositions: []
-      DuplicatesShapes: []
-  _generated: []
-  Async: 0
-  FlexibleGen: 0
-  Seed: -533
-  RandomSeed: 1
-  GenerateOnStart: 1
-  RunAfterGenerating:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AppInitializer, Assembly-CSharp
-        m_MethodName: LoadMainScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _plannerDraftsDirectory: {fileID: 102900000, guid: 0cf7a9679140ae84aa29385d0e1d7373,
-    type: 3}
-  _Editor_SelectedSetup: 0
-  _Editor_PreviewingShape: 0
-  _Editor_drawInitShape: 1
-  _Editor_drawMainVariables: 1
-  _Editor_displaySetup: 1
-  _Editor_topInfoClicked: 0
-  generatedGenerators: []
-  generatedPainters: []
-  generatedFlexiblePainters: []
---- !u!4 &641415139
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641415136}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &793628519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,7 +1709,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2373,29 +2022,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &948378904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b11aa65450895324a9fe17af1094f4da, type: 3}
-  m_Name: (Clone)
-  m_EditorClassIdentifier: 
-  _editorForceChanged: 0
-  Width:
-    Min: 20
-    Max: 20
-  Depth:
-    Min: 20
-    Max: 20
-  YLevels:
-    Min: 1
-    Max: 1
-  OriginInCenter: 1
 --- !u!1 &989133506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2900,7 +2526,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -3778,7 +3405,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -4415,7 +4043,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -4505,7 +4134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1860194327
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44300658, g: 0.4921953, b: 0.57192475, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,13 +98,13 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,9 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -147,6 +149,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.2055283, y: -20.353233, z: -10.295307}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -181,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -213,6 +217,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -243,57 +248,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 892910000}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &367214109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f132315e3189e59479a1674dc7e52576, type: 3}
-  m_Name: Root(Clone)
-  m_EditorClassIdentifier: 
-  FieldModificators:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ParentPreset: {fileID: 0}
-  DisableWholePackage: 0
-  SeedMode: 0
-  CustomSeed: 0
-  ModPackType: 0
-  TagForAllSpawners: 
-  Variables: []
-  CallOnAllMod: {fileID: 0}
-  CallOnAllSpawners:
-    Enabled: 1
-    Name: 
-    SpawnerTag: 
-    StampPrefabID: 0
-    Parent: {fileID: 0}
-    Rules: []
-    Mode: 0
-    CellCheckMode: 0
-    _Editor_SpawnerAdvancedOptionsFoldout: 0
-    OnScalledGrid: 0
-    Repeat: 0
-    InheritRotations: 0
-    MultipleToSpawn: 0
-    UseGlobalRules: 0
-    UseParentPackageRules: 0
-    _wasEnablingGlobalRules: 0
-    ScaleAccess: 0
-    DisplayPreviewGUI: 0
-    IsSubSpawner: 0
-    _EditorDisplaySpawnerHeader: 0
-  _EditorDisplayCallOnAll: 0
 --- !u!1 &671314166
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +279,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 892910000}
   m_RootOrder: 2
@@ -360,16 +320,11 @@ MonoBehaviour:
   Data: {fileID: 1034313224}
   UseDataHolder: 1
   InternalSetup:
+    ParentObject: {fileID: 0}
     FieldPreset: {fileID: 0}
     Preparation:
-      generatingSetup: {fileID: 0}
       Injections: []
       CellInstructions: []
-      IgnoredPacksForGenerating: []
-      IgnoredModificationsForGenerating: []
-      SwitchVariables: []
-      SwitchPackVariables: []
-      OptionalCheckers: []
       _newCells: []
       _EditorGUI_DrawExtra: 0
       _EditorGUI_DrawIgnoring: 0
@@ -393,15 +348,35 @@ MonoBehaviour:
       InstantiatedInfos: []
       MainContainer: {fileID: 0}
       FieldTransform: {fileID: 0}
-      RoomBounds:
+      FieldBounds:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-      GeneratedLightProbes: {fileID: 0}
       GeneratedReflectionProbes: []
       GeneratedTriggers: []
       OptionalCheckerFieldsData: []
       InstantiationContainers: []
       initialized: 0
+  Composition:
+    UseComposition: 0
+    Owner: {fileID: 0}
+    OverrideEnabled: 1
+    Prepared: 0
+    Setup: {fileID: 0}
+    Injections: []
+    GenType: 1
+    JustModPack: {fileID: 0}
+    JustMod: {fileID: 0}
+    OtherPlanner: {fileID: 0}
+    subSetup: {fileID: 0}
+    FieldSetupVariablesOverrides: []
+    FieldPackagesOverrides: []
+    UtilityModsOverrides: []
+    OverrideCellSize: 0
+    OverridingCellSize: {x: 1, y: 1, z: 1}
+    ParentFieldPlanner: {fileID: 0}
+    PlannerVariablesOverrides: []
+    InitShapes: []
+    Instances: 1
   RunAfterGenerating:
     m_PersistentCalls:
       m_Calls: []
@@ -419,6 +394,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 42.33, y: 14.524839, z: -15.189907}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1034313225}
   - {fileID: 892910000}
@@ -451,6 +427,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.2055283, y: -20.353233, z: -10.295307}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -481,6 +458,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2130490092}
   - {fileID: 239673224}
@@ -530,9 +508,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -569,6 +555,7 @@ Transform:
   m_LocalRotation: {x: 0.57548755, y: 0.0012291968, z: -0.0008604359, w: 0.81780916}
   m_LocalPosition: {x: 58.519123, y: 45.48278, z: -18.050203}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -623,17 +610,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Setup:
+    ParentObject: {fileID: 0}
     FieldPreset: {fileID: 11400000, guid: 12e73cd70f60cb04083024599008d4c5, type: 2}
     Preparation:
-      generatingSetup: {fileID: 1881411295}
       Injections: []
       CellInstructions: []
-      IgnoredPacksForGenerating: []
-      IgnoredModificationsForGenerating:
-      - {fileID: -4131372485017240469, guid: 12e73cd70f60cb04083024599008d4c5, type: 2}
-      SwitchVariables: []
-      SwitchPackVariables: []
-      OptionalCheckers: []
       _newCells: []
       _EditorGUI_DrawExtra: 0
       _EditorGUI_DrawIgnoring: 0
@@ -657,10 +638,9 @@ MonoBehaviour:
       InstantiatedInfos: []
       MainContainer: {fileID: 0}
       FieldTransform: {fileID: 715920938}
-      RoomBounds:
+      FieldBounds:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-      GeneratedLightProbes: {fileID: 0}
       GeneratedReflectionProbes: []
       GeneratedTriggers: []
       OptionalCheckerFieldsData: []
@@ -688,16 +668,11 @@ MonoBehaviour:
       initialized: 0
   Owner: {fileID: 715920937}
   AdditionalSetups:
-  - FieldPreset: {fileID: 0}
+  - ParentObject: {fileID: 0}
+    FieldPreset: {fileID: 0}
     Preparation:
-      generatingSetup: {fileID: 0}
       Injections: []
       CellInstructions: []
-      IgnoredPacksForGenerating: []
-      IgnoredModificationsForGenerating: []
-      SwitchVariables: []
-      SwitchPackVariables: []
-      OptionalCheckers: []
       _newCells: []
       _EditorGUI_DrawExtra: 0
       _EditorGUI_DrawIgnoring: 0
@@ -721,10 +696,9 @@ MonoBehaviour:
       InstantiatedInfos: []
       MainContainer: {fileID: 0}
       FieldTransform: {fileID: 0}
-      RoomBounds:
+      FieldBounds:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-      GeneratedLightProbes: {fileID: 0}
       GeneratedReflectionProbes: []
       GeneratedTriggers: []
       OptionalCheckerFieldsData: []
@@ -740,6 +714,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 715920938}
   m_RootOrder: 0
@@ -820,6 +795,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1230056716
@@ -832,6 +808,7 @@ Transform:
   m_LocalRotation: {x: 0.48296294, y: -0.22414385, z: 0.1294095, w: 0.8365163}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -862,57 +839,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.2055283, y: -20.353233, z: -10.295307}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1542816280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f132315e3189e59479a1674dc7e52576, type: 3}
-  m_Name: Root(Clone)
-  m_EditorClassIdentifier: 
-  FieldModificators:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ParentPreset: {fileID: 0}
-  DisableWholePackage: 0
-  SeedMode: 0
-  CustomSeed: 0
-  ModPackType: 0
-  TagForAllSpawners: 
-  Variables: []
-  CallOnAllMod: {fileID: 0}
-  CallOnAllSpawners:
-    Enabled: 1
-    Name: 
-    SpawnerTag: 
-    StampPrefabID: 0
-    Parent: {fileID: 0}
-    Rules: []
-    Mode: 0
-    CellCheckMode: 0
-    _Editor_SpawnerAdvancedOptionsFoldout: 0
-    OnScalledGrid: 0
-    Repeat: 0
-    InheritRotations: 0
-    MultipleToSpawn: 0
-    UseGlobalRules: 0
-    UseParentPackageRules: 0
-    _wasEnablingGlobalRules: 0
-    ScaleAccess: 0
-    DisplayPreviewGUI: 0
-    IsSubSpawner: 0
-    _EditorDisplaySpawnerHeader: 0
-  _EditorDisplayCallOnAll: 0
 --- !u!1 &1689604985
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +870,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 892910000}
   m_RootOrder: 3
@@ -1001,6 +933,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1694498258
 Canvas:
   m_ObjectHideFlags: 0
@@ -1018,7 +951,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1032,6 +967,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1852393765}
   m_Father: {fileID: 0}
@@ -1071,6 +1007,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1694498259}
   m_RootOrder: 0
@@ -1110,6 +1047,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1152,92 +1090,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852393764}
   m_CullTransparentMesh: 0
---- !u!114 &1881411295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b6c361108247f045b5087f48c0c7951, type: 3}
-  m_Name: FS_Draft 2(Clone)
-  m_EditorClassIdentifier: 
-  CellSize: 2.5
-  NonUniformSize: 0
-  NonUniformCellSize: {x: 2, y: 2, z: 2}
-  InfoText: Here write custom note about FieldSetup
-  Variables:
-  - Name: Spawn Propability Multiplier
-    v3Val: {x: 1, y: 0, z: 0}
-    str: 
-    mat: {fileID: 0}
-    gameObj: {fileID: 0}
-    helper: {x: 0, y: 5, z: 0}
-    ValueType: 1
-  - Name: Spawn Count Multiplier
-    v3Val: {x: 1, y: 0, z: 0}
-    str: 
-    mat: {fileID: 0}
-    gameObj: {fileID: 0}
-    helper: {x: 0, y: 5, z: 0}
-    ValueType: 1
-  - Name: Bench
-    v3Val: {x: 1, y: 0, z: 0}
-    str: 
-    mat: {fileID: 0}
-    gameObj: {fileID: 0}
-    helper: {x: 0, y: 0, z: 0}
-    ValueType: 4
-  DoorsModificator: {fileID: 11400000, guid: 7500e28d48a8ac44da90dfc8719e91ef, type: 2}
-  EraseWallModificator: {fileID: 11400000, guid: c5bd286613ebcb24c932c8d5e7f79f9b,
-    type: 2}
-  CellsInstructions:
-  - Title: Door Hole
-    InstructionType: 1
-    TargetModification: {fileID: 11400000, guid: 7500e28d48a8ac44da90dfc8719e91ef,
-      type: 2}
-    Tags: Props
-    InstructionArgument: 
-    Foldout: 1
-    extraMod: {fileID: 0}
-    extraPack: {fileID: 0}
-  - Title: Clear Wall
-    InstructionType: 3
-    TargetModification: {fileID: 11400000, guid: c5bd286613ebcb24c932c8d5e7f79f9b,
-      type: 2}
-    Tags: 
-    InstructionArgument: 
-    Foldout: 1
-    extraMod: {fileID: 0}
-    extraPack: {fileID: 0}
-  RootPack: {fileID: 1542816280}
-  ModificatorPacks:
-  - {fileID: 367214109}
-  Ignores: []
-  DontSpawnOn: 
-  SelfInjections: []
-  disabledMods: []
-  AddReflectionProbes: 0
-  MainReflectionSettings: {fileID: 11400000, guid: dabe448206028124294db7edb02eed3f,
-    type: 2}
-  AddMultipleProbes: 0
-  SmallerReflSettings: {fileID: 11400000, guid: 290a908b3df7c6a4a84c21c932841cde,
-    type: 2}
-  MiniReflSettings: {fileID: 11400000, guid: b243a7973537dbf4faacf7bbda74dada, type: 2}
-  SmallerReflLowerSpaceThan: 4
-  AddLightProbes: 0
-  ProbesPerCell: 1
-  TriggerColliderGeneration: 0
-  TriggerGenSettings:
-    ScaleupTriggers: 1
-    FillHeight: 1
-    MaxCellChecks: 10
-    JoinBounds: 1
-    GenerateRelations: 1
-    GroupUpToSize: 8
-    MaxGroupDistance: 8
 --- !u!1 &1904313286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,6 +1116,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 47.78882, y: 7.124008, z: -11.301398}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1294,6 +1147,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 892910000}
   m_RootOrder: 0

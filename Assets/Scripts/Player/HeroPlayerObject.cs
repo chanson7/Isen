@@ -6,17 +6,19 @@ using Cinemachine;
 public class HeroPlayerObject : NetworkBehaviour
 {
     [SerializeField] GameObject heroModel;
+    [SerializeField] GameObject localPlayerArmsModel;
     [SerializeField] CinemachineVirtualCamera firstPersonVcam;
-    [SerializeField] Transform cameraFollow;
+    [SerializeField] Transform cameraPivot;
 
     public override void OnStartLocalPlayer()
     {
-        this.GetComponent<PlayerInput>().enabled = true;
+        GetComponent<PlayerInput>().enabled = true;
 
-        heroModel.gameObject.SetActive(false);
+        heroModel.SetActive(false);
+        //localPlayerArmsModel.SetActive(true);
 
         firstPersonVcam = Instantiate(firstPersonVcam);
-        firstPersonVcam.Follow = cameraFollow;
+        firstPersonVcam.Follow = cameraPivot;
     }
 
 }

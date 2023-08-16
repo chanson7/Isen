@@ -1248,9 +1248,9 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   buildPlannerExecutor: {fileID: 322208115}
-  heroPlayerPrefab: {fileID: 4908637372374807870, guid: b6aff498318530548846ca11825c3d98,
+  heroPlayerPrefab: {fileID: 7575958861045079788, guid: 64ed47025ba72d744986a650bf9f5425,
     type: 3}
-  mannequinPlayerPrefab: {fileID: 5082118526173675251, guid: a01875303799d93499ed3ff86f661058,
+  mannequinPlayerPrefab: {fileID: 7575958861045079788, guid: 684280c3861011948b1337ff201f4843,
     type: 3}
 --- !u!114 &812944035
 MonoBehaviour:

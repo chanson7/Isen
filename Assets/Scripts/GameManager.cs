@@ -7,9 +7,10 @@ public class GameManager : NetworkBehaviour
 {
 
     public static GameManager singleton { get; private set; }
-    [SerializeField] BuildPlannerExecutor buildPlannerExecutor;
     GameState gameState;
-    List<Transform> playerSpawnPoints = new List<Transform>();
+    List<Transform> playerSpawnPoints = new();
+    
+    [SerializeField] BuildPlannerExecutor buildPlannerExecutor;
     [SerializeField] GameObject heroPlayerPrefab;
     [SerializeField] GameObject mannequinPlayerPrefab;
 
@@ -19,7 +20,7 @@ public class GameManager : NetworkBehaviour
             Destroy(singleton.gameObject);
 
         singleton = this;
-        gameState = this.GetComponent<GameState>();
+        gameState = GetComponent<GameState>();
     }
 
     public override void OnStartServer()
@@ -51,7 +52,7 @@ public class GameManager : NetworkBehaviour
 
                 playerSpawnPoints.RemoveAt(randomIndex);
 
-                GameObject player = Instantiate(mannequinPlayerPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation);
+                GameObject player = Instantiate(heroPlayerPrefab, playerSpawnTransform.position, playerSpawnTransform.rotation);
 
                 NetworkServer.ReplacePlayerForConnection(connection.Value, player);
             }

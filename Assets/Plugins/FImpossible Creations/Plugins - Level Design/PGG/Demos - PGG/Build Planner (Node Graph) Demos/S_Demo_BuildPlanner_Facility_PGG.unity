@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4433082, g: 0.4925639, b: 0.5722184, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,13 +98,14 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 43b70eca028fae1499d7379c61573228,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +118,9 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -179,10 +182,9 @@ MonoBehaviour:
       InstantiatedInfos: []
       MainContainer: {fileID: 0}
       FieldTransform: {fileID: 600030758}
-      RoomBounds:
+      FieldBounds:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-      GeneratedLightProbes: {fileID: 0}
       GeneratedReflectionProbes: []
       GeneratedTriggers: []
       OptionalCheckerFieldsData: []
@@ -200,6 +202,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 600030758}
   m_RootOrder: 0
@@ -233,6 +236,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 732596529}
   m_RootOrder: 1
@@ -257,6 +261,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.6179246, g: 1, b: 0.66602594, a: 0.3764706}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -327,9 +332,16 @@ MonoBehaviour:
     PlannerVariablesOverrides:
     - Name: Counter Wall Spawns Ignores
       v3Val: {x: 1, y: 0, z: 0}
+      colVal: {r: 0, g: 0, b: 0, a: 0}
       str: 
       mat: {fileID: 0}
       gameObj: {fileID: 0}
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
       unityObj: {fileID: 0}
       helper: {x: 0, y: 0, z: 0}
       additionalHelperRef: {fileID: 0}
@@ -340,9 +352,16 @@ MonoBehaviour:
       FloatSwitch: 0
     - Name: Separation Space
       v3Val: {x: 0.08, y: 0, z: 0}
+      colVal: {r: 0, g: 0, b: 0, a: 0}
       str: 
       mat: {fileID: 0}
       gameObj: {fileID: 0}
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
       unityObj: {fileID: 0}
       helper: {x: 0, y: 1, z: 0}
       additionalHelperRef: {fileID: 0}
@@ -357,6 +376,7 @@ MonoBehaviour:
       OverrideEnabled: 1
       Prepared: 1
       Setup: {fileID: 11400000, guid: c21695430ec0c3c428cd6ef7f9d2687c, type: 2}
+      Injections: []
       GenType: 1
       JustModPack: {fileID: 0}
       JustMod: {fileID: 0}
@@ -365,9 +385,16 @@ MonoBehaviour:
       FieldSetupVariablesOverrides:
       - Name: Spawn Propability Multiplier
         v3Val: {x: 1, y: 0, z: 0}
+        colVal: {r: 0, g: 0, b: 0, a: 0}
         str: 
         mat: {fileID: 0}
         gameObj: {fileID: 0}
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
         unityObj: {fileID: 0}
         helper: {x: 0, y: 2, z: 0}
         additionalHelperRef: {fileID: 0}
@@ -378,9 +405,16 @@ MonoBehaviour:
         FloatSwitch: 0
       - Name: Spawn Count Multiplier
         v3Val: {x: 1, y: 0, z: 0}
+        colVal: {r: 0, g: 0, b: 0, a: 0}
         str: 
         mat: {fileID: 0}
         gameObj: {fileID: 0}
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
         unityObj: {fileID: 0}
         helper: {x: 0, y: 5, z: 0}
         additionalHelperRef: {fileID: 0}
@@ -497,9 +531,16 @@ MonoBehaviour:
       PlannerVariablesOverrides:
       - Name: Door Command
         v3Val: {x: 0, y: 0, z: 0}
+        colVal: {r: 0, g: 0, b: 0, a: 0}
         str: 
         mat: {fileID: 0}
         gameObj: {fileID: 0}
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
         unityObj: {fileID: 0}
         helper: {x: 0, y: 0, z: 0}
         additionalHelperRef: {fileID: 0}
@@ -516,6 +557,7 @@ MonoBehaviour:
       OverrideEnabled: 1
       Prepared: 1
       Setup: {fileID: 11400000, guid: c21695430ec0c3c428cd6ef7f9d2687c, type: 2}
+      Injections: []
       GenType: 1
       JustModPack: {fileID: 0}
       JustMod: {fileID: 0}
@@ -524,9 +566,16 @@ MonoBehaviour:
       FieldSetupVariablesOverrides:
       - Name: Spawn Propability Multiplier
         v3Val: {x: 1, y: 0, z: 0}
+        colVal: {r: 0, g: 0, b: 0, a: 0}
         str: 
         mat: {fileID: 0}
         gameObj: {fileID: 0}
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
         unityObj: {fileID: 0}
         helper: {x: 0, y: 2, z: 0}
         additionalHelperRef: {fileID: 0}
@@ -537,9 +586,16 @@ MonoBehaviour:
         FloatSwitch: 0
       - Name: Spawn Count Multiplier
         v3Val: {x: 1, y: 0, z: 0}
+        colVal: {r: 0, g: 0, b: 0, a: 0}
         str: 
         mat: {fileID: 0}
         gameObj: {fileID: 0}
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
         unityObj: {fileID: 0}
         helper: {x: 0, y: 5, z: 0}
         additionalHelperRef: {fileID: 0}
@@ -657,9 +713,16 @@ MonoBehaviour:
       PlannerVariablesOverrides:
       - Name: Door Command
         v3Val: {x: 0, y: 0, z: 0}
+        colVal: {r: 0, g: 0, b: 0, a: 0}
         str: 
         mat: {fileID: 0}
         gameObj: {fileID: 0}
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
         unityObj: {fileID: 0}
         helper: {x: 0, y: 0, z: 0}
         additionalHelperRef: {fileID: 0}
@@ -681,6 +744,7 @@ MonoBehaviour:
         OverrideEnabled: 1
         Prepared: 0
         Setup: {fileID: 0}
+        Injections: []
         GenType: 1
         JustModPack: {fileID: 0}
         JustMod: {fileID: 0}
@@ -700,6 +764,7 @@ MonoBehaviour:
         OverrideEnabled: 1
         Prepared: 0
         Setup: {fileID: 0}
+        Injections: []
         GenType: 1
         JustModPack: {fileID: 0}
         JustMod: {fileID: 0}
@@ -719,6 +784,7 @@ MonoBehaviour:
         OverrideEnabled: 1
         Prepared: 0
         Setup: {fileID: 0}
+        Injections: []
         GenType: 1
         JustModPack: {fileID: 0}
         JustMod: {fileID: 0}
@@ -738,6 +804,7 @@ MonoBehaviour:
         OverrideEnabled: 1
         Prepared: 0
         Setup: {fileID: 0}
+        Injections: []
         GenType: 1
         JustModPack: {fileID: 0}
         JustMod: {fileID: 0}
@@ -757,6 +824,7 @@ MonoBehaviour:
         OverrideEnabled: 1
         Prepared: 0
         Setup: {fileID: 0}
+        Injections: []
         GenType: 1
         JustModPack: {fileID: 0}
         JustMod: {fileID: 0}
@@ -794,6 +862,7 @@ MonoBehaviour:
   _Editor_drawMainVariables: 0
   _Editor_displaySetup: 1
   _Editor_topInfoClicked: 0
+  generatedGenerators: []
   generatedPainters: []
   generatedFlexiblePainters: []
 --- !u!4 &511677012
@@ -806,6 +875,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 600030758}
   m_Father: {fileID: 0}
@@ -837,6 +907,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.947939, y: -34.290176, z: -21.080772}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -905,10 +976,9 @@ MonoBehaviour:
       InstantiatedInfos: []
       MainContainer: {fileID: 0}
       FieldTransform: {fileID: 0}
-      RoomBounds:
+      FieldBounds:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-      GeneratedLightProbes: {fileID: 0}
       GeneratedReflectionProbes: []
       GeneratedTriggers: []
       OptionalCheckerFieldsData: []
@@ -920,6 +990,7 @@ MonoBehaviour:
     OverrideEnabled: 1
     Prepared: 1
     Setup: {fileID: 11400000, guid: c21695430ec0c3c428cd6ef7f9d2687c, type: 2}
+    Injections: []
     GenType: 1
     JustModPack: {fileID: 0}
     JustMod: {fileID: 0}
@@ -928,9 +999,16 @@ MonoBehaviour:
     FieldSetupVariablesOverrides:
     - Name: Spawn Propability Multiplier
       v3Val: {x: 1, y: 0, z: 0}
+      colVal: {r: 0, g: 0, b: 0, a: 0}
       str: 
       mat: {fileID: 0}
       gameObj: {fileID: 0}
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
       unityObj: {fileID: 0}
       helper: {x: 0, y: 2, z: 0}
       additionalHelperRef: {fileID: 0}
@@ -941,9 +1019,16 @@ MonoBehaviour:
       FloatSwitch: 0
     - Name: Spawn Count Multiplier
       v3Val: {x: 1, y: 0, z: 0}
+      colVal: {r: 0, g: 0, b: 0, a: 0}
       str: 
       mat: {fileID: 0}
       gameObj: {fileID: 0}
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
       unityObj: {fileID: 0}
       helper: {x: 0, y: 5, z: 0}
       additionalHelperRef: {fileID: 0}
@@ -1060,9 +1145,16 @@ MonoBehaviour:
     PlannerVariablesOverrides:
     - Name: Door Command
       v3Val: {x: 0, y: 0, z: 0}
+      colVal: {r: 0, g: 0, b: 0, a: 0}
       str: 
       mat: {fileID: 0}
       gameObj: {fileID: 0}
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
       unityObj: {fileID: 0}
       helper: {x: 0, y: 0, z: 0}
       additionalHelperRef: {fileID: 0}
@@ -1091,6 +1183,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 130053358}
   m_Father: {fileID: 511677012}
@@ -1122,6 +1215,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.947939, y: -34.290176, z: -21.080772}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1184,6 +1278,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &732596528
 Canvas:
   m_ObjectHideFlags: 0
@@ -1201,7 +1296,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1215,6 +1312,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1330804790}
   - {fileID: 343567753}
@@ -1302,6 +1400,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &874614691
@@ -1314,6 +1413,7 @@ Transform:
   m_LocalRotation: {x: -0.5457066, y: -0.20680816, z: -0.06116612, w: -0.8097489}
   m_LocalPosition: {x: 9.431318, y: -10.204964, z: 14.478809}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1344,6 +1444,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.2055283, y: -20.353233, z: -10.295307}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1377,6 +1478,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 732596529}
   m_RootOrder: 0
@@ -1416,6 +1518,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1493,6 +1596,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1543,6 +1647,7 @@ MonoBehaviour:
   YLevels:
     Min: 1
     Max: 1
+  OriginInCenter: 0
 --- !u!124 &5193937905325788507
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1593,9 +1698,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1632,6 +1745,7 @@ Transform:
   m_LocalRotation: {x: -0.04524449, y: -0.8929357, z: 0.43831024, w: -0.09221197}
   m_LocalPosition: {x: -19.948484, y: 41.43888, z: 31.540457}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

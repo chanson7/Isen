@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,13 +98,13 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,9 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -151,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -183,6 +186,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -214,9 +218,17 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207217073}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &207217075
@@ -230,10 +242,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -258,6 +272,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &207217076
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -276,6 +291,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -22.5, y: -4.86, z: -11.1}
   m_LocalScale: {x: 15.494, y: 15.494, z: 15.494}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -307,6 +323,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15.39, y: 0.5, z: -13.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
@@ -329,7 +346,14 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   MultiSet: {fileID: 11400000, guid: 10e7e3046f9429a45a0d5880671c420c, type: 2}
   Areas:
   - Name: Area 0
@@ -343,6 +367,7 @@ MonoBehaviour:
     - 1
     PointsFoldout: 1
     Points: []
+    ApplyPhysicalSimulation: 0
   Spawned: []
   Selected: 0
   editorSelected: -1
@@ -373,9 +398,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327729907}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &327729909
@@ -389,10 +422,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -417,6 +452,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &327729910
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -435,6 +471,7 @@ Transform:
   m_LocalRotation: {x: -0.11163568, y: -0.5137433, z: -0.06763561, w: 0.84795684}
   m_LocalPosition: {x: 0, y: -3.35, z: -2.82}
   m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -468,13 +505,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2077026261}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -10.000122, y: 10.000016}
+  m_AnchoredPosition: {x: -10.000122, y: 10.0000305}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &384420114
@@ -507,6 +545,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.8915094, b: 0.8915094, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -561,6 +600,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.6, y: 1.8, z: -13.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
@@ -583,16 +623,24 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
   AlwaysDrawPreview: 0
   ReplaceAlreadySpawned: 1
   SpawnPropability: 1
   PrefabsSet: {fileID: 11400000, guid: 2e415cb2181c4fc499cddc242389bbb4, type: 2}
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   spawningInfo:
     SetReference: {fileID: 11400000, guid: 2e415cb2181c4fc499cddc242389bbb4, type: 2}
     PrefabReference:
       Prefab: {fileID: 6550918050701515677, guid: 48ed120f05ddc1446a5518a186db1e6b,
         type: 3}
+      MainCollider: {fileID: 0}
       subID: 0
       _refMesh: {fileID: 2534964839176971238, guid: 17a6d31b191e6ca4ebc498825d736e03,
         type: 3}
@@ -648,7 +696,14 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   MultiSet: {fileID: 11400000, guid: d44742f86f4f88a4e84b394e24321e32, type: 2}
   Areas:
   - Name: Area 0
@@ -662,6 +717,7 @@ MonoBehaviour:
     - 2
     PointsFoldout: 1
     Points: []
+    ApplyPhysicalSimulation: 0
   Spawned: []
   Selected: 0
   editorSelected: -1
@@ -675,6 +731,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.171, y: 2.51, z: -11.475}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 28
@@ -705,6 +762,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.2055283, y: -20.353233, z: -10.295307}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -735,6 +793,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.2055283, y: -20.353233, z: -10.295307}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -774,16 +833,24 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
   AlwaysDrawPreview: 0
   ReplaceAlreadySpawned: 1
   SpawnPropability: 1
   PrefabsSet: {fileID: 11400000, guid: 2e415cb2181c4fc499cddc242389bbb4, type: 2}
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   spawningInfo:
     SetReference: {fileID: 11400000, guid: 2e415cb2181c4fc499cddc242389bbb4, type: 2}
     PrefabReference:
       Prefab: {fileID: 6550918050701515677, guid: 48ed120f05ddc1446a5518a186db1e6b,
         type: 3}
+      MainCollider: {fileID: 0}
       subID: 0
       _refMesh: {fileID: 2534964839176971238, guid: 17a6d31b191e6ca4ebc498825d736e03,
         type: 3}
@@ -814,6 +881,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -21.45, y: 3.49, z: -12.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21
@@ -844,6 +912,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.2055283, y: -20.353233, z: -10.295307}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -883,7 +952,14 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   MultiSet: {fileID: 11400000, guid: d44742f86f4f88a4e84b394e24321e32, type: 2}
   Areas:
   - Name: Area 0
@@ -897,6 +973,7 @@ MonoBehaviour:
     - 1.539
     PointsFoldout: 1
     Points: []
+    ApplyPhysicalSimulation: 0
   Spawned: []
   Selected: 0
   editorSelected: -1
@@ -910,6 +987,7 @@ Transform:
   m_LocalRotation: {x: -0.040371202, y: 0.21264118, z: -0.18210274, w: 0.9591625}
   m_LocalPosition: {x: 1.84, y: 2.11, z: -2.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 29
@@ -949,16 +1027,24 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
   AlwaysDrawPreview: 0
   ReplaceAlreadySpawned: 1
   SpawnPropability: 1
   PrefabsSet: {fileID: 11400000, guid: b35ae354aca4a354c99eaeb91682790d, type: 2}
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   spawningInfo:
     SetReference: {fileID: 11400000, guid: b35ae354aca4a354c99eaeb91682790d, type: 2}
     PrefabReference:
       Prefab: {fileID: 7897753526492407738, guid: ea41a67f7cbe4b44ba8efa695c92c452,
         type: 3}
+      MainCollider: {fileID: 0}
       subID: 0
       _refMesh: {fileID: 6121590469811200223, guid: b8c27da8bc12f7d499597a1970dffec8,
         type: 3}
@@ -989,6 +1075,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7, y: 2.29, z: -3.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -1033,9 +1120,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1072,6 +1167,7 @@ Transform:
   m_LocalRotation: {x: 0.30381408, y: -0.022013592, z: 0.0058042724, w: 0.9524594}
   m_LocalPosition: {x: -9.039221, y: 6.8, z: -19.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1102,6 +1198,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.2055283, y: -20.353233, z: -10.295307}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1141,7 +1238,14 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   MultiSet: {fileID: 11400000, guid: d44742f86f4f88a4e84b394e24321e32, type: 2}
   Areas:
   - Name: Area 0
@@ -1155,6 +1259,7 @@ MonoBehaviour:
     - 0.39
     PointsFoldout: 1
     Points: []
+    ApplyPhysicalSimulation: 0
   Spawned: []
   Selected: 0
   editorSelected: -1
@@ -1168,6 +1273,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.95859647, z: 0, w: 0.28476834}
   m_LocalPosition: {x: -6.598, y: 0.68, z: -13.814}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 27
@@ -1207,16 +1313,24 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
   AlwaysDrawPreview: 0
   ReplaceAlreadySpawned: 1
   SpawnPropability: 1
   PrefabsSet: {fileID: 11400000, guid: b35ae354aca4a354c99eaeb91682790d, type: 2}
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   spawningInfo:
     SetReference: {fileID: 11400000, guid: b35ae354aca4a354c99eaeb91682790d, type: 2}
     PrefabReference:
       Prefab: {fileID: 7897753526492407738, guid: ea41a67f7cbe4b44ba8efa695c92c452,
         type: 3}
+      MainCollider: {fileID: 0}
       subID: 0
       _refMesh: {fileID: 6121590469811200223, guid: b8c27da8bc12f7d499597a1970dffec8,
         type: 3}
@@ -1247,6 +1361,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.3, y: 1.5, z: -11.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
@@ -1280,6 +1395,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2077026261}
   m_RootOrder: 0
@@ -1304,6 +1420,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1378,9 +1495,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296932352}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1296932354
@@ -1394,10 +1519,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1422,6 +1549,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1296932355
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1440,6 +1568,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 200, y: 1, z: 200}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1470,6 +1599,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.495028, y: 3.5082169, z: -15.572059}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 23
@@ -1501,9 +1631,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372459343}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1372459345
@@ -1517,10 +1655,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1545,6 +1685,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1372459346
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1563,6 +1704,7 @@ Transform:
   m_LocalRotation: {x: 0.017314563, y: -0.51807016, z: 0.010490204, w: 0.85509855}
   m_LocalPosition: {x: -7.92, y: -3.71, z: 1.32}
   m_LocalScale: {x: 10, y: 10, z: 10}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -1602,16 +1744,24 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
   AlwaysDrawPreview: 0
   ReplaceAlreadySpawned: 1
   SpawnPropability: 1
   PrefabsSet: {fileID: 11400000, guid: b35ae354aca4a354c99eaeb91682790d, type: 2}
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   spawningInfo:
     SetReference: {fileID: 11400000, guid: b35ae354aca4a354c99eaeb91682790d, type: 2}
     PrefabReference:
       Prefab: {fileID: 7897753526492407738, guid: ea41a67f7cbe4b44ba8efa695c92c452,
         type: 3}
+      MainCollider: {fileID: 0}
       subID: 0
       _refMesh: {fileID: 6121590469811200223, guid: b8c27da8bc12f7d499597a1970dffec8,
         type: 3}
@@ -1642,6 +1792,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.25, y: 1.98, z: -7.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -1722,6 +1873,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1604834286
@@ -1734,6 +1886,7 @@ Transform:
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1773,7 +1926,14 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   MultiSet: {fileID: 11400000, guid: d44742f86f4f88a4e84b394e24321e32, type: 2}
   Areas:
   - Name: Area 0
@@ -1787,6 +1947,7 @@ MonoBehaviour:
     - 0.58
     PointsFoldout: 1
     Points: []
+    ApplyPhysicalSimulation: 0
   Spawned: []
   Selected: 0
   editorSelected: -1
@@ -1800,6 +1961,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.95980525, z: 0, w: 0.28066683}
   m_LocalPosition: {x: -6.478, y: 2.01, z: -13.663}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 26
@@ -1839,16 +2001,24 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
   AlwaysDrawPreview: 0
   ReplaceAlreadySpawned: 1
   SpawnPropability: 1
   PrefabsSet: {fileID: 11400000, guid: 2e415cb2181c4fc499cddc242389bbb4, type: 2}
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   spawningInfo:
     SetReference: {fileID: 11400000, guid: 2e415cb2181c4fc499cddc242389bbb4, type: 2}
     PrefabReference:
       Prefab: {fileID: 6550918050701515677, guid: 48ed120f05ddc1446a5518a186db1e6b,
         type: 3}
+      MainCollider: {fileID: 0}
       subID: 0
       _refMesh: {fileID: 2534964839176971238, guid: 17a6d31b191e6ca4ebc498825d736e03,
         type: 3}
@@ -1879,6 +2049,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15.19, y: 1.8, z: -7.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
@@ -1918,16 +2089,24 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
   AlwaysDrawPreview: 0
   ReplaceAlreadySpawned: 1
   SpawnPropability: 1
   PrefabsSet: {fileID: 11400000, guid: 2e415cb2181c4fc499cddc242389bbb4, type: 2}
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   spawningInfo:
     SetReference: {fileID: 11400000, guid: 2e415cb2181c4fc499cddc242389bbb4, type: 2}
     PrefabReference:
       Prefab: {fileID: 6550918050701515677, guid: 48ed120f05ddc1446a5518a186db1e6b,
         type: 3}
+      MainCollider: {fileID: 0}
       subID: 0
       _refMesh: {fileID: 2534964839176971238, guid: 17a6d31b191e6ca4ebc498825d736e03,
         type: 3}
@@ -1958,6 +2137,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.42, y: 1.97, z: 0.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
@@ -1988,6 +2168,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.82, y: 0.5, z: -13.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -2027,7 +2208,14 @@ MonoBehaviour:
   UseRestrictions: 1
   MaxRetryAttempts: 6
   SpawnEvenRetriesFails: 0
+  AlwaysDetachSpawned: 0
   _editorDrawSpawnSettings: 1
+  PhysicalPlacement:
+    Enabled: 0
+    MinimumIterations: 70
+    LimitDistanceFromOrigin: 8
+    SimulateUntilStopped: 1
+    _Editor_Foldout: 0
   MultiSet: {fileID: 11400000, guid: 44b4ae793e9deed45b7d5511d7d14191, type: 2}
   Areas:
   - Name: Area 0
@@ -2041,6 +2229,7 @@ MonoBehaviour:
     - 1
     PointsFoldout: 1
     Points: []
+    ApplyPhysicalSimulation: 0
   - Name: Area 2
     Shape: 2
     NoInside: 0
@@ -2060,6 +2249,7 @@ MonoBehaviour:
       rot: {x: 0, y: 1, z: 0, w: -0.00000004371139}
     - pos: {x: -0.81341076, y: -0.75, z: 1.3228788}
       rot: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+    ApplyPhysicalSimulation: 0
   - Name: Area 2
     Shape: 2
     NoInside: 0
@@ -2079,6 +2269,7 @@ MonoBehaviour:
       rot: {x: 0, y: 0, z: 0, w: 1}
     - pos: {x: -0.6000004, y: 0.099999905, z: 0}
       rot: {x: 0, y: 0, z: 0, w: 1}
+    ApplyPhysicalSimulation: 0
   Spawned: []
   Selected: 1
   editorSelected: -1
@@ -2092,6 +2283,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.602, y: 2.061, z: -13.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 25
@@ -2101,6 +2293,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8173656565611597744, guid: d39828e15a2bf5440b3af344b05a22e9,
@@ -2179,6 +2372,9 @@ PrefabInstance:
       value: Respawn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d39828e15a2bf5440b3af344b05a22e9, type: 3}
 --- !u!1 &2077026257
 GameObject:
@@ -2238,6 +2434,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &2077026260
 Canvas:
   m_ObjectHideFlags: 0
@@ -2255,7 +2452,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2269,6 +2468,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1280720790}
   - {fileID: 384420113}
@@ -2285,6 +2485,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7076947802163644412, guid: de0268b055c083c49a8ff78b9955b461,
@@ -2353,12 +2554,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de0268b055c083c49a8ff78b9955b461, type: 3}
 --- !u!1001 &4137742243206222161
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7490649875786768542, guid: 0d585fb801acafb48830ac7ab1c909c3,
@@ -2427,4 +2632,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d585fb801acafb48830ac7ab1c909c3, type: 3}
