@@ -88,7 +88,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 0}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: 3115861136972055489}
 --- !u!114 &-8954230169286780338
 MonoBehaviour:
@@ -278,7 +278,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Propability: 0.65
   PropabilityMulVariable:
@@ -749,7 +749,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -907,8 +907,8 @@ MonoBehaviour:
   _editor_drawSpawners: 1
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
-  _editor_shareSelected: 0
-  ParentPreset: {fileID: 0}
+  _editor_shareSelected: 1
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: 3115861136972055489}
 --- !u!114 &-5295391226751154758
 MonoBehaviour:
@@ -1420,7 +1420,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 0}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: 3115861136972055489}
 --- !u!114 &-3050620730724458000
 MonoBehaviour:
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -1771,7 +1771,7 @@ MonoBehaviour:
   DrawObjectStamps: 1
   OMultiStamp: {fileID: 0}
   PrefabsList:
-  - Prefab: {fileID: 7664966479174878941, guid: 4809efc11df316947907dd80ca5f2bd2,
+  - Prefab: {fileID: 3182392532076348877, guid: bde41aad126d9ec4891417a0e8ae1d1c,
       type: 3}
     MainCollider: {fileID: 925149282897037768, guid: 4809efc11df316947907dd80ca5f2bd2,
       type: 3}
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 0}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: 3115861136972055489}
 --- !u!114 &-2098350380900485076
 MonoBehaviour:
@@ -2067,7 +2067,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 0}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: 3115861136972055489}
 --- !u!114 &-1318006328419888203
 MonoBehaviour:
@@ -2167,7 +2167,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -2609,7 +2609,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 0}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: 3115861136972055489}
 --- !u!114 &1656994821044670476
 MonoBehaviour:
@@ -2854,7 +2854,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -2953,7 +2953,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 0}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: 3115861136972055489}
 --- !u!114 &2505672804677102470
 MonoBehaviour:
@@ -2978,7 +2978,7 @@ MonoBehaviour:
   DrawObjectStamps: 1
   OMultiStamp: {fileID: 0}
   PrefabsList:
-  - Prefab: {fileID: 2487248942609357993, guid: 4c2be7a8799bdf64c948c9504b6df77f,
+  - Prefab: {fileID: 7664966479174878941, guid: d26acbbb30eba3d44a06319b71acbfaa,
       type: 3}
     MainCollider: {fileID: -4844026053637717907, guid: 4c2be7a8799bdf64c948c9504b6df77f,
       type: 3}

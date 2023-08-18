@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1945651929517860242}
   - component: {fileID: 4387824725052084568}
   - component: {fileID: 8689367161215031316}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Small Pipe Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}

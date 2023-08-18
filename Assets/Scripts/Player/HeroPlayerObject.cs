@@ -17,7 +17,7 @@ public class HeroPlayerObject : NetworkBehaviour
         heroModel.SetActive(false);
         //localPlayerArmsModel.SetActive(true);
 
-        firstPersonVcam = Instantiate(firstPersonVcam);
+        firstPersonVcam = Instantiate(firstPersonVcam, transform);
         firstPersonVcam.Follow = cameraPivot;
     }
 

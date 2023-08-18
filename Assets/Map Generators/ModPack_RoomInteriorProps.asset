@@ -693,14 +693,14 @@ MonoBehaviour:
   DrawObjectStamps: 1
   OMultiStamp: {fileID: 0}
   PrefabsList:
-  - Prefab: {fileID: 23088133044520102, guid: 9664923a624582940bdfa6c99eb63b14, type: 3}
+  - Prefab: {fileID: 7413462603675000004, guid: 2d6cf8b0f61fd43459a5a22c1c543ca4,
+      type: 3}
     MainCollider: {fileID: 0}
     subID: 0
     _refMesh: {fileID: -6659003102834268097, guid: f47a9249f2199f44b896bff81e760830,
       type: 3}
     _refCol: {fileID: 0}
-  - Prefab: {fileID: 3884997054161931712, guid: 29057865905f43848a16b637ea082721,
-      type: 3}
+  - Prefab: {fileID: 362657174681504043, guid: cd73cfc380fe9cf4884d857ecb6ed882, type: 3}
     MainCollider: {fileID: 0}
     subID: 0
     _refMesh: {fileID: -9114703323446395147, guid: 832600c23a0f5ca4cb3ae080872e096a,
@@ -2017,7 +2017,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.16
   PropabilityMulVariable:
@@ -2037,12 +2037,13 @@ MonoBehaviour:
   m_Name: ModPack_RoomInteriorProps
   m_EditorClassIdentifier: 
   FieldModificators:
-  - {fileID: -4211052369908908318}
+  - {fileID: 5580493703936657394}
+  - {fileID: -8857276009455978284}
   - {fileID: 6990836390581781409}
   - {fileID: -6555750166738775983}
   - {fileID: 1076852388431377131}
-  - {fileID: -8857276009455978284}
   - {fileID: -7159157248221465641}
+  - {fileID: -4211052369908908318}
   - {fileID: -6163071984533231416}
   - {fileID: 923952724925266947}
   - {fileID: -2925440260325766704}
@@ -2436,6 +2437,33 @@ MonoBehaviour:
   _editor_shareSelected: 0
   ParentPreset: {fileID: 11400000, guid: daab46818ef153e4f84e9c29aee3f28c, type: 2}
   ParentPack: {fileID: 11400000}
+--- !u!114 &1351501942369987946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226bc5f4badaab3438244b84b7cee058, type: 3}
+  m_Name: SR_Rotate-[Debris Props]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 0
+  CellAllow: 1
+  AllConditionsMet: 1
+  GetRotationFromTagged: 
+  CheckMode: 0
+  RotationEulerOffset: {x: 0, y: 0, z: 0}
+  RandomRotation: {x: 0, y: 360, z: 0}
+  MaxDegreesSteps: {x: 1, y: 0, z: 1}
+  LocalRotation: 0
+  OverrideRotation: 1
 --- !u!114 &1398512921419020282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3084,6 +3112,72 @@ MonoBehaviour:
     name: 
     requiredType: 1
     Tooltip: 
+--- !u!114 &5580493703936657394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
+  m_Name: Player Spawn Points
+  m_EditorClassIdentifier: 
+  TemporaryContainer: {fileID: 0}
+  Enabled: 1
+  ModTag: FProp
+  DrawMeshAndBox: 0
+  Combine: 0
+  RunEmittersIfContains: 0
+  DrawSetupFor: 0
+  OStamp: {fileID: 0}
+  DrawObjectStamps: 1
+  OMultiStamp: {fileID: 0}
+  PrefabsList:
+  - Prefab: {fileID: 4224058691623743716, guid: de5a0f39173f0f947b4bc4016639b62d,
+      type: 3}
+    MainCollider: {fileID: 0}
+    subID: 0
+    _refMesh: {fileID: -9188728115170210297, guid: 551ffa5172276a945bf4dc094dc5a1c3,
+      type: 3}
+    _refCol: {fileID: 0}
+  DrawMultiObjectStamps: 1
+  Spawners:
+  - Enabled: 1
+    Name: Player Spawn Point
+    SpawnerTag: 
+    StampPrefabID: -1
+    Parent: {fileID: 5580493703936657394}
+    Rules:
+    - {fileID: 7819435602890237952}
+    - {fileID: 7704103279807105002}
+    - {fileID: 1351501942369987946}
+    - {fileID: 7918239936319458038}
+    Mode: 3
+    CellCheckMode: 4
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 1
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 0
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 0
+  SubSpawners: []
+  VariantOf: {fileID: 0}
+  _editor_drawStamp: 1
+  _editor_drawSpawners: 1
+  _editor_drawGlobalRules: 0
+  _editor_drawModPackRules: 0
+  _editor_shareSelected: 0
+  ParentPreset: {fileID: 11400000, guid: daab46818ef153e4f84e9c29aee3f28c, type: 2}
+  ParentPack: {fileID: 11400000}
 --- !u!114 &5680174466899482988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3512,6 +3606,37 @@ MonoBehaviour:
     name: 
     requiredType: 1
     Tooltip: 
+--- !u!114 &7704103279807105002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a80a4eda1baa814cb0a342f0acfc697, type: 3}
+  m_Name: SR_LimitSpawnCount-[Player Spawn Points]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  Count:
+    Min: 1
+    Max: 1
+  CountMulVariable:
+    name: 
+    requiredType: 1
+    Tooltip: 
+  InheritFromCellsCount: 0
+  RoomCellsDivBy:
+    Min: 4
+    Max: 6
 --- !u!114 &7750209246993854435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3554,6 +3679,38 @@ MonoBehaviour:
   _DrawOffsets: 1
   _DrawRandomization: 0
   _DrawAdditionals: 0
+--- !u!114 &7819435602890237952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094c68a3bf2d9a349851f593cd6a24eb, type: 3}
+  m_Name: SR_CellDistance-[FieldMod_ModPack_Props1]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  OffsetCellMode: 0
+  OffsetCell: {x: 0, y: 0, z: 0}
+  DistanceMustBe: 1
+  IgnoreSelf: 1
+  DistanceToTagged: Wall
+  CheckMode: 0
+  Distance: 2
+  MeasureIn: 0
+  DistanceMulVariable:
+    name: 
+    requiredType: 1
+    Tooltip: 
 --- !u!114 &7820815307228929204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3614,6 +3771,34 @@ MonoBehaviour:
     ToCheck:
     - {x: 0, y: 0, z: 0}
     EditorDisplayColor: {r: 0.4, g: 0.4, b: 1, a: 0.95}
+--- !u!114 &7918239936319458038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e4d5aac49ca0345b5c3ac36491d897, type: 3}
+  m_Name: SR_WorldOffset-[Debris Props]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 0
+  CellAllow: 1
+  AllConditionsMet: 1
+  OverrideOffset: 1
+  Randomize: 1
+  GetOffsetFromTagged: 
+  CheckMode: 0
+  WorldOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  RandomWorldOffset: {x: 0.5, y: 0, z: 0.5}
+  RandomRange: {x: 0, y: 1}
 --- !u!114 &8076428717779912780
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -73,8 +73,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall Base Doorhole
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5378288737320143576, guid: bde41aad126d9ec4891417a0e8ae1d1c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3182392532076348877, guid: bde41aad126d9ec4891417a0e8ae1d1c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6839116211894557893}
   m_SourcePrefab: {fileID: 100100000, guid: bde41aad126d9ec4891417a0e8ae1d1c, type: 3}
+--- !u!1 &7664966479174878941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182392532076348877, guid: bde41aad126d9ec4891417a0e8ae1d1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5077051306061497104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6839116211894557893
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664966479174878941}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: c069cab173b461b4c96f4f27e13b20a9, type: 2}

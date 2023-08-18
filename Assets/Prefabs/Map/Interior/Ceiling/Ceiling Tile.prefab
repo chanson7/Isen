@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7755653608526570002}
   - component: {fileID: 5495916105423853272}
   - component: {fileID: 6899340391233298043}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Ceiling Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

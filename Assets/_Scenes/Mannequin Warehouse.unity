@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf09ae0e4269ee47ad7dc215a34444a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildPlannerPreset: {fileID: 11400000, guid: 43a673807dc8f554ba670ba86bf046a5, type: 2}
+  BuildPlannerPreset: {fileID: 11400000, guid: 3b74970435d5fc344b10f6e9cbef20d2, type: 2}
   _plannerPrepare:
     PlannerVariablesOverrides:
     - Name: Counter Wall Spawns Ignores
@@ -178,12 +178,32 @@ MonoBehaviour:
       displayOnScene: 0
       allowTransformFollow: 0
       FloatSwitch: 0
+    - Name: Separation Space
+      v3Val: {x: 0.05, y: 0, z: 0}
+      colVal: {r: 0, g: 0, b: 0, a: 0}
+      str: 
+      mat: {fileID: 0}
+      gameObj: {fileID: 0}
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      unityObj: {fileID: 0}
+      helper: {x: 0, y: 1, z: 0}
+      additionalHelperRef: {fileID: 0}
+      ValueType: 1
+      helpForFieldCommand: 0
+      displayOnScene: 0
+      allowTransformFollow: 0
+      FloatSwitch: 0
     FieldSetupCompositions:
-    - UseComposition: 1
-      Owner: {fileID: 322208115}
+    - UseComposition: 0
+      Owner: {fileID: 0}
       OverrideEnabled: 1
       Prepared: 0
-      Setup: {fileID: 11400000, guid: 04321e34df64d8042bf5580bf76d0468, type: 2}
+      Setup: {fileID: 11400000, guid: daab46818ef153e4f84e9c29aee3f28c, type: 2}
       Injections: []
       GenType: 1
       JustModPack: {fileID: 0}
@@ -231,13 +251,33 @@ MonoBehaviour:
         displayOnScene: 0
         allowTransformFollow: 0
         FloatSwitch: 0
+      - Name: Test
+        v3Val: {x: 1, y: 0, z: 0}
+        colVal: {r: 0, g: 0, b: 0, a: 0}
+        str: 
+        mat: {fileID: 0}
+        gameObj: {fileID: 0}
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        unityObj: {fileID: 0}
+        helper: {x: 0, y: 2, z: 0}
+        additionalHelperRef: {fileID: 0}
+        ValueType: 1
+        helpForFieldCommand: 0
+        displayOnScene: 0
+        allowTransformFollow: 0
+        FloatSwitch: 0
       FieldPackagesOverrides:
-      - ParentPack: {fileID: -7913814128861270479, guid: 04321e34df64d8042bf5580bf76d0468,
+      - ParentPack: {fileID: 3115861136972055489, guid: daab46818ef153e4f84e9c29aee3f28c,
           type: 2}
         SetEnabled: 1
         PackVariablesOverrides: []
         PackModsOverrides:
-        - ParentMod: {fileID: -4732108533949608611, guid: 04321e34df64d8042bf5580bf76d0468,
+        - ParentMod: {fileID: -9119072704089641195, guid: daab46818ef153e4f84e9c29aee3f28c,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -248,15 +288,10 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -1473594173213036481, guid: 04321e34df64d8042bf5580bf76d0468,
+        - ParentMod: {fileID: 1656994821044670476, guid: daab46818ef153e4f84e9c29aee3f28c,
             type: 2}
-          SetEnabled: 1
+          SetEnabled: 0
           OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
           - Prefab: {fileID: 0}
             MainCollider: {fileID: 0}
             subID: 0
@@ -269,7 +304,7 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 7393589115315746936, guid: 04321e34df64d8042bf5580bf76d0468,
+        - ParentMod: {fileID: -1825256377213928877, guid: daab46818ef153e4f84e9c29aee3f28c,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -283,21 +318,12 @@ MonoBehaviour:
             subID: 0
             _refMesh: {fileID: 0}
             _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: -2110506669480402728, guid: daab46818ef153e4f84e9c29aee3f28c,
+            type: 2}
+          SetEnabled: 1
+          OverridePrefabs:
           - Prefab: {fileID: 0}
             MainCollider: {fileID: 0}
             subID: 0
@@ -305,7 +331,7 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -4225742253804519822, guid: 04321e34df64d8042bf5580bf76d0468,
+        - ParentMod: {fileID: 2376264944608969774, guid: daab46818ef153e4f84e9c29aee3f28c,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -326,7 +352,8 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 0}
+        - ParentMod: {fileID: -3126839250680293183, guid: daab46818ef153e4f84e9c29aee3f28c,
+            type: 2}
           SetEnabled: 1
           OverridePrefabs:
           - Prefab: {fileID: 0}
@@ -334,11 +361,11 @@ MonoBehaviour:
             subID: 0
             _refMesh: {fileID: 0}
             _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 0}
-          SetEnabled: 1
-          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
           - Prefab: {fileID: 0}
             MainCollider: {fileID: 0}
             subID: 0
@@ -346,7 +373,33 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 7068911637912187695, guid: 04321e34df64d8042bf5580bf76d0468,
+        - ParentMod: {fileID: 862627480448401009, guid: daab46818ef153e4f84e9c29aee3f28c,
+            type: 2}
+          SetEnabled: 1
+          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: -5467592123514326602, guid: daab46818ef153e4f84e9c29aee3f28c,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -357,11 +410,38 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-      - ParentPack: {fileID: 11400000, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
+      - ParentPack: {fileID: 11400000, guid: dc18e9675467dc24b9016b0775e1f7be, type: 2}
         SetEnabled: 1
         PackVariablesOverrides: []
         PackModsOverrides:
-        - ParentMod: {fileID: 6921288919283922783, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: -4211052369908908318, guid: dc18e9675467dc24b9016b0775e1f7be,
+            type: 2}
+          SetEnabled: 1
+          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: 6990836390581781409, guid: dc18e9675467dc24b9016b0775e1f7be,
+            type: 2}
+          SetEnabled: 0
+          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: -6555750166738775983, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -377,86 +457,7 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -7019258575112548385, guid: 1301776f7fac7e348baac98bc68a043d,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -4211052369908908318, guid: 1301776f7fac7e348baac98bc68a043d,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 6990836390581781409, guid: 1301776f7fac7e348baac98bc68a043d,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -6555750166738775983, guid: 1301776f7fac7e348baac98bc68a043d,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 1076852388431377131, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: 1076852388431377131, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -477,7 +478,7 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -7159157248221465641, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: -8857276009455978284, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -488,9 +489,20 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -6163071984533231416, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: -7159157248221465641, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
           SetEnabled: 1
+          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: -6163071984533231416, guid: dc18e9675467dc24b9016b0775e1f7be,
+            type: 2}
+          SetEnabled: 0
           OverridePrefabs:
           - Prefab: {fileID: 0}
             MainCollider: {fileID: 0}
@@ -509,7 +521,7 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 923952724925266947, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: 923952724925266947, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -520,15 +532,26 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -2925440260325766704, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: -2925440260325766704, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
-          SetEnabled: 1
+          SetEnabled: 0
           OverridePrefabs:
           - Prefab: {fileID: 0}
             MainCollider: {fileID: 0}
             subID: 0
             _refMesh: {fileID: 0}
             _refCol: {fileID: 0}
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: 5580493703936657394, guid: dc18e9675467dc24b9016b0775e1f7be,
+            type: 2}
+          SetEnabled: 1
+          OverridePrefabs:
           - Prefab: {fileID: 0}
             MainCollider: {fileID: 0}
             subID: 0
@@ -537,15 +560,20 @@ MonoBehaviour:
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
       UtilityModsOverrides:
-      - ParentMod: {fileID: 7216765575469090860, guid: 04321e34df64d8042bf5580bf76d0468,
+      - ParentMod: {fileID: 2505672804677102470, guid: daab46818ef153e4f84e9c29aee3f28c,
           type: 2}
         SetEnabled: 1
-        OverridePrefabs: []
+        OverridePrefabs:
+        - Prefab: {fileID: 0}
+          MainCollider: {fileID: 0}
+          subID: 0
+          _refMesh: {fileID: 0}
+          _refCol: {fileID: 0}
         OverrideStampSet: {fileID: 0}
         OverrideMultiSet: {fileID: 0}
       OverrideCellSize: 0
       OverridingCellSize: {x: 1, y: 1, z: 1}
-      ParentFieldPlanner: {fileID: -2936498578635561756, guid: 43a673807dc8f554ba670ba86bf046a5,
+      ParentFieldPlanner: {fileID: -2936498578635561756, guid: 3b74970435d5fc344b10f6e9cbef20d2,
         type: 2}
       PlannerVariablesOverrides:
       - Name: Door Command
@@ -569,13 +597,13 @@ MonoBehaviour:
         allowTransformFollow: 0
         FloatSwitch: 1
       InitShapes:
-      - {fileID: 1761016981}
+      - {fileID: 2124327551}
       Instances: 1
-    - UseComposition: 1
-      Owner: {fileID: 322208115}
+    - UseComposition: 0
+      Owner: {fileID: 0}
       OverrideEnabled: 1
       Prepared: 0
-      Setup: {fileID: 11400000, guid: c0dd25d3924512a439a58823963458dd, type: 2}
+      Setup: {fileID: 11400000, guid: daab46818ef153e4f84e9c29aee3f28c, type: 2}
       Injections: []
       GenType: 1
       JustModPack: {fileID: 0}
@@ -623,13 +651,33 @@ MonoBehaviour:
         displayOnScene: 0
         allowTransformFollow: 0
         FloatSwitch: 0
+      - Name: Test
+        v3Val: {x: 1, y: 0, z: 0}
+        colVal: {r: 0, g: 0, b: 0, a: 0}
+        str: 
+        mat: {fileID: 0}
+        gameObj: {fileID: 0}
+        curve:
+          serializedVersion: 2
+          m_Curve: []
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        unityObj: {fileID: 0}
+        helper: {x: 0, y: 2, z: 0}
+        additionalHelperRef: {fileID: 0}
+        ValueType: 1
+        helpForFieldCommand: 0
+        displayOnScene: 0
+        allowTransformFollow: 0
+        FloatSwitch: 0
       FieldPackagesOverrides:
-      - ParentPack: {fileID: -7913814128861270479, guid: c0dd25d3924512a439a58823963458dd,
+      - ParentPack: {fileID: 3115861136972055489, guid: daab46818ef153e4f84e9c29aee3f28c,
           type: 2}
         SetEnabled: 1
         PackVariablesOverrides: []
         PackModsOverrides:
-        - ParentMod: {fileID: -4732108533949608611, guid: c0dd25d3924512a439a58823963458dd,
+        - ParentMod: {fileID: -9119072704089641195, guid: daab46818ef153e4f84e9c29aee3f28c,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -640,15 +688,10 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -1473594173213036481, guid: c0dd25d3924512a439a58823963458dd,
+        - ParentMod: {fileID: 1656994821044670476, guid: daab46818ef153e4f84e9c29aee3f28c,
             type: 2}
-          SetEnabled: 1
+          SetEnabled: 0
           OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
           - Prefab: {fileID: 0}
             MainCollider: {fileID: 0}
             subID: 0
@@ -661,7 +704,7 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 7393589115315746936, guid: c0dd25d3924512a439a58823963458dd,
+        - ParentMod: {fileID: -1825256377213928877, guid: daab46818ef153e4f84e9c29aee3f28c,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -675,21 +718,12 @@ MonoBehaviour:
             subID: 0
             _refMesh: {fileID: 0}
             _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: -2110506669480402728, guid: daab46818ef153e4f84e9c29aee3f28c,
+            type: 2}
+          SetEnabled: 1
+          OverridePrefabs:
           - Prefab: {fileID: 0}
             MainCollider: {fileID: 0}
             subID: 0
@@ -697,7 +731,7 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -4225742253804519822, guid: c0dd25d3924512a439a58823963458dd,
+        - ParentMod: {fileID: 2376264944608969774, guid: daab46818ef153e4f84e9c29aee3f28c,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -718,7 +752,8 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 0}
+        - ParentMod: {fileID: -3126839250680293183, guid: daab46818ef153e4f84e9c29aee3f28c,
+            type: 2}
           SetEnabled: 1
           OverridePrefabs:
           - Prefab: {fileID: 0}
@@ -726,11 +761,11 @@ MonoBehaviour:
             subID: 0
             _refMesh: {fileID: 0}
             _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 0}
-          SetEnabled: 1
-          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
           - Prefab: {fileID: 0}
             MainCollider: {fileID: 0}
             subID: 0
@@ -738,7 +773,33 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 7068911637912187695, guid: c0dd25d3924512a439a58823963458dd,
+        - ParentMod: {fileID: 862627480448401009, guid: daab46818ef153e4f84e9c29aee3f28c,
+            type: 2}
+          SetEnabled: 1
+          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: -5467592123514326602, guid: daab46818ef153e4f84e9c29aee3f28c,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -749,11 +810,38 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-      - ParentPack: {fileID: 11400000, guid: 1301776f7fac7e348baac98bc68a043d, type: 2}
+      - ParentPack: {fileID: 11400000, guid: dc18e9675467dc24b9016b0775e1f7be, type: 2}
         SetEnabled: 1
         PackVariablesOverrides: []
         PackModsOverrides:
-        - ParentMod: {fileID: 6921288919283922783, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: -4211052369908908318, guid: dc18e9675467dc24b9016b0775e1f7be,
+            type: 2}
+          SetEnabled: 1
+          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: 6990836390581781409, guid: dc18e9675467dc24b9016b0775e1f7be,
+            type: 2}
+          SetEnabled: 0
+          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: -6555750166738775983, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -769,86 +857,7 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -7019258575112548385, guid: 1301776f7fac7e348baac98bc68a043d,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -4211052369908908318, guid: 1301776f7fac7e348baac98bc68a043d,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 6990836390581781409, guid: 1301776f7fac7e348baac98bc68a043d,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -6555750166738775983, guid: 1301776f7fac7e348baac98bc68a043d,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 1076852388431377131, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: 1076852388431377131, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -869,7 +878,7 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -7159157248221465641, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: -8857276009455978284, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -880,28 +889,7 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -6163071984533231416, guid: 1301776f7fac7e348baac98bc68a043d,
-            type: 2}
-          SetEnabled: 1
-          OverridePrefabs:
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          - Prefab: {fileID: 0}
-            MainCollider: {fileID: 0}
-            subID: 0
-            _refMesh: {fileID: 0}
-            _refCol: {fileID: 0}
-          OverrideStampSet: {fileID: 0}
-          OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: 923952724925266947, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: -7159157248221465641, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
           SetEnabled: 1
           OverridePrefabs:
@@ -912,10 +900,15 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-        - ParentMod: {fileID: -2925440260325766704, guid: 1301776f7fac7e348baac98bc68a043d,
+        - ParentMod: {fileID: -6163071984533231416, guid: dc18e9675467dc24b9016b0775e1f7be,
             type: 2}
-          SetEnabled: 1
+          SetEnabled: 0
           OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
           - Prefab: {fileID: 0}
             MainCollider: {fileID: 0}
             subID: 0
@@ -928,10 +921,59 @@ MonoBehaviour:
             _refCol: {fileID: 0}
           OverrideStampSet: {fileID: 0}
           OverrideMultiSet: {fileID: 0}
-      UtilityModsOverrides: []
+        - ParentMod: {fileID: 923952724925266947, guid: dc18e9675467dc24b9016b0775e1f7be,
+            type: 2}
+          SetEnabled: 1
+          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: -2925440260325766704, guid: dc18e9675467dc24b9016b0775e1f7be,
+            type: 2}
+          SetEnabled: 0
+          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+        - ParentMod: {fileID: 5580493703936657394, guid: dc18e9675467dc24b9016b0775e1f7be,
+            type: 2}
+          SetEnabled: 1
+          OverridePrefabs:
+          - Prefab: {fileID: 0}
+            MainCollider: {fileID: 0}
+            subID: 0
+            _refMesh: {fileID: 0}
+            _refCol: {fileID: 0}
+          OverrideStampSet: {fileID: 0}
+          OverrideMultiSet: {fileID: 0}
+      UtilityModsOverrides:
+      - ParentMod: {fileID: 2505672804677102470, guid: daab46818ef153e4f84e9c29aee3f28c,
+          type: 2}
+        SetEnabled: 1
+        OverridePrefabs:
+        - Prefab: {fileID: 0}
+          MainCollider: {fileID: 0}
+          subID: 0
+          _refMesh: {fileID: 0}
+          _refCol: {fileID: 0}
+        OverrideStampSet: {fileID: 0}
+        OverrideMultiSet: {fileID: 0}
       OverrideCellSize: 0
       OverridingCellSize: {x: 1, y: 1, z: 1}
-      ParentFieldPlanner: {fileID: 3014821584910370675, guid: 43a673807dc8f554ba670ba86bf046a5,
+      ParentFieldPlanner: {fileID: 3014821584910370675, guid: 3b74970435d5fc344b10f6e9cbef20d2,
         type: 2}
       PlannerVariablesOverrides:
       - Name: Door Command
@@ -955,13 +997,53 @@ MonoBehaviour:
         allowTransformFollow: 0
         FloatSwitch: 1
       InitShapes:
-      - {fileID: 1355948208}
-      Instances: 8
+      - {fileID: 979035752}
+      Instances: 10
     UseDuplicatesOverrides: 0000
     DuplicatesOverrides:
     - DuplicatesCompositions: []
       DuplicatesShapes: []
     - DuplicatesCompositions:
+      - UseComposition: 0
+        Owner: {fileID: 0}
+        OverrideEnabled: 1
+        Prepared: 0
+        Setup: {fileID: 0}
+        Injections: []
+        GenType: 1
+        JustModPack: {fileID: 0}
+        JustMod: {fileID: 0}
+        OtherPlanner: {fileID: 0}
+        subSetup: {fileID: 0}
+        FieldSetupVariablesOverrides: []
+        FieldPackagesOverrides: []
+        UtilityModsOverrides: []
+        OverrideCellSize: 0
+        OverridingCellSize: {x: 1, y: 1, z: 1}
+        ParentFieldPlanner: {fileID: 0}
+        PlannerVariablesOverrides: []
+        InitShapes: []
+        Instances: 1
+      - UseComposition: 0
+        Owner: {fileID: 0}
+        OverrideEnabled: 1
+        Prepared: 0
+        Setup: {fileID: 0}
+        Injections: []
+        GenType: 1
+        JustModPack: {fileID: 0}
+        JustMod: {fileID: 0}
+        OtherPlanner: {fileID: 0}
+        subSetup: {fileID: 0}
+        FieldSetupVariablesOverrides: []
+        FieldPackagesOverrides: []
+        UtilityModsOverrides: []
+        OverrideCellSize: 0
+        OverridingCellSize: {x: 1, y: 1, z: 1}
+        ParentFieldPlanner: {fileID: 0}
+        PlannerVariablesOverrides: []
+        InitShapes: []
+        Instances: 1
       - UseComposition: 0
         Owner: {fileID: 0}
         OverrideEnabled: 1
@@ -1110,6 +1192,8 @@ MonoBehaviour:
       - {fileID: 0}
       - {fileID: 0}
       - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
   _generated: []
   Async: 1
   FlexibleGen: 0
@@ -1136,7 +1220,7 @@ MonoBehaviour:
   _Editor_SelectedSetup: 1
   _Editor_PreviewingShape: 1
   _Editor_drawInitShape: 1
-  _Editor_drawMainVariables: 0
+  _Editor_drawMainVariables: 1
   _Editor_displaySetup: 1
   _Editor_topInfoClicked: 1
   generatedGenerators: []
@@ -1427,7 +1511,7 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!114 &1355948208
+--- !u!114 &979035752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1441,11 +1525,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _editorForceChanged: 0
   Width:
-    Min: 8
-    Max: 14
+    Min: 10
+    Max: 15
   Depth:
-    Min: 8
-    Max: 14
+    Min: 10
+    Max: 15
   YLevels:
     Min: 1
     Max: 1
@@ -1711,7 +1795,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1761016981
+--- !u!114 &2124327551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1725,13 +1809,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _editorForceChanged: 0
   BranchLength:
-    Min: 4
-    Max: 40
+    Min: 5
+    Max: 10
   TargetBranches:
     Min: 4
-    Max: 30
+    Max: 12
   BranchThickness:
-    Min: 4
-    Max: 4
-  SeparationFactor: 12
+    Min: 5
+    Max: 5
+  SeparationFactor: 7
   AvoidOverlaps: 1

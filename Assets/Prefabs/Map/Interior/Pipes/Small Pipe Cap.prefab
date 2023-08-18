@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1803637952627851725}
   - component: {fileID: 3361959920252800616}
   - component: {fileID: 670161089229765282}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Small Pipe Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

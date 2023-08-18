@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 209814217996256014}
   - component: {fileID: 2669965674489493444}
   - component: {fileID: 5146711238755752195}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Ceiling Support Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ded2609adc75554a806d1035adae18f, type: 2}
+  - {fileID: 2100000, guid: c344c70c3e8a99d448deaa02c44d9683, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
