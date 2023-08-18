@@ -439,38 +439,6 @@ MonoBehaviour:
     ToCheck:
     - {x: 0, y: 0, z: 0}
     EditorDisplayColor: {r: 0.4, g: 0.4, b: 1, a: 0.95}
---- !u!114 &-7349271224765306973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094c68a3bf2d9a349851f593cd6a24eb, type: 3}
-  m_Name: SR_CellDistance-[Cardbox Debris]
-  m_EditorClassIdentifier: 
-  Logic: 0
-  Negate: 0
-  Global: 0
-  Enabled: 1
-  Ignore: 0
-  _editor_drawRule: 1
-  CellAllow: 0
-  AllConditionsMet: 1
-  OffsetCellMode: 0
-  OffsetCell: {x: 0, y: 0, z: 0}
-  DistanceMustBe: 1
-  IgnoreSelf: 1
-  DistanceToTagged: CBFProp
-  CheckMode: 0
-  Distance: 3
-  MeasureIn: 0
-  DistanceMulVariable:
-    name: 
-    requiredType: 1
-    Tooltip: 
 --- !u!114 &-7159157248221465641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,72 +568,6 @@ MonoBehaviour:
     ToCheck:
     - {x: 0, y: 0, z: 0}
     EditorDisplayColor: {r: 0.4, g: 0.4, b: 1, a: 0.95}
---- !u!114 &-7019258575112548385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
-  m_Name: Cardbox floor debris
-  m_EditorClassIdentifier: 
-  TemporaryContainer: {fileID: 0}
-  Enabled: 0
-  ModTag: FProp,CBFProp
-  DrawMeshAndBox: 0
-  Combine: 0
-  RunEmittersIfContains: 0
-  DrawSetupFor: 0
-  OStamp: {fileID: 0}
-  DrawObjectStamps: 1
-  OMultiStamp: {fileID: 0}
-  PrefabsList:
-  - Prefab: {fileID: 8032096495142805359, guid: f712ff1bad724e44aba29d87d75b65f3,
-      type: 3}
-    MainCollider: {fileID: 0}
-    subID: 0
-    _refMesh: {fileID: 1452673609854614013, guid: 58c1cfc82f0f5484e9692e1db76f6103,
-      type: 3}
-    _refCol: {fileID: 0}
-  DrawMultiObjectStamps: 1
-  Spawners:
-  - Enabled: 1
-    Name: Random
-    SpawnerTag: 
-    StampPrefabID: -1
-    Parent: {fileID: -7019258575112548385}
-    Rules:
-    - {fileID: -677014756891403174}
-    - {fileID: -1173517654826443648}
-    - {fileID: 5628367110739129002}
-    - {fileID: -7349271224765306973}
-    Mode: 3
-    CellCheckMode: 0
-    _Editor_SpawnerAdvancedOptionsFoldout: 0
-    OnScalledGrid: 1
-    Repeat: 1
-    DontInheritRotations: 0
-    SwitchSpawnedToStatic: 0
-    MultipleToSpawn: 0
-    UseGlobalRules: 1
-    UseParentPackageRules: 1
-    _wasEnablingGlobalRules: 1
-    ScaleAccess: 1
-    DisplayPreviewGUI: 1
-    IsSubSpawner: 0
-    _EditorDisplaySpawnerHeader: 0
-  SubSpawners: []
-  VariantOf: {fileID: 0}
-  _editor_drawStamp: 1
-  _editor_drawSpawners: 1
-  _editor_drawGlobalRules: 0
-  _editor_drawModPackRules: 0
-  _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 04321e34df64d8042bf5580bf76d0468, type: 2}
-  ParentPack: {fileID: 11400000}
 --- !u!114 &-6923816223132088914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,32 +1198,6 @@ MonoBehaviour:
   _DrawOffsets: 1
   _DrawRandomization: 0
   _DrawAdditionals: 0
---- !u!114 &-5294317940347779489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0acc9caea68f8c4b8c90c5e659b5f87, type: 3}
-  m_Name: SR_Scale-[Floor Cables Prop]
-  m_EditorClassIdentifier: 
-  Logic: 0
-  Negate: 0
-  Global: 0
-  Enabled: 1
-  Ignore: 0
-  _editor_drawRule: 1
-  CellAllow: 1
-  AllConditionsMet: 1
-  ScaleMultiplier: {x: 0.5, y: 1, z: 0.5}
-  ScaleMulVariable:
-    name: 
-    requiredType: 5
-    Tooltip: 
-  RandomizeScale: {x: 0.1, y: 0, z: 0.1}
 --- !u!114 &-4673291336826311084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1409,7 +1285,7 @@ MonoBehaviour:
   m_Name: Debris Props
   m_EditorClassIdentifier: 
   TemporaryContainer: {fileID: 0}
-  Enabled: 0
+  Enabled: 1
   ModTag: DbrPrp,FProp
   DrawMeshAndBox: 0
   Combine: 0
@@ -1419,46 +1295,11 @@ MonoBehaviour:
   DrawObjectStamps: 1
   OMultiStamp: {fileID: 0}
   PrefabsList:
-  - Prefab: {fileID: 8170135739647260779, guid: 4785312a537a5d241917d9caf8a9f42d,
+  - Prefab: {fileID: 8170135739647260779, guid: dde32f7accd553e409b7a8a379e16354,
       type: 3}
     MainCollider: {fileID: 0}
     subID: 0
     _refMesh: {fileID: -9188728115170210297, guid: 551ffa5172276a945bf4dc094dc5a1c3,
-      type: 3}
-    _refCol: {fileID: 0}
-  - Prefab: {fileID: 8170135739647260779, guid: 4785312a537a5d241917d9caf8a9f42d,
-      type: 3}
-    MainCollider: {fileID: 0}
-    subID: 0
-    _refMesh: {fileID: -9188728115170210297, guid: 551ffa5172276a945bf4dc094dc5a1c3,
-      type: 3}
-    _refCol: {fileID: 0}
-  - Prefab: {fileID: 8170135739647260779, guid: 4785312a537a5d241917d9caf8a9f42d,
-      type: 3}
-    MainCollider: {fileID: 0}
-    subID: 0
-    _refMesh: {fileID: -9188728115170210297, guid: 551ffa5172276a945bf4dc094dc5a1c3,
-      type: 3}
-    _refCol: {fileID: 0}
-  - Prefab: {fileID: 3738909794264315396, guid: f81e9f1b8d70dd14098b8bfa43dcdab4,
-      type: 3}
-    MainCollider: {fileID: 0}
-    subID: 0
-    _refMesh: {fileID: 521079795165537200, guid: 6761b0efb62965745affdc4126efdc56,
-      type: 3}
-    _refCol: {fileID: 0}
-  - Prefab: {fileID: 2075005126703333143, guid: 93237d06c3d9a0c4189095e8e7bcf05b,
-      type: 3}
-    MainCollider: {fileID: 0}
-    subID: 0
-    _refMesh: {fileID: -6480777465733412803, guid: 2c3e2d30343305048b5edae7f5e75062,
-      type: 3}
-    _refCol: {fileID: 0}
-  - Prefab: {fileID: 6329323109841730785, guid: 5329fc7b46e59e9428b9615f7493347f,
-      type: 3}
-    MainCollider: {fileID: 0}
-    subID: 0
-    _refMesh: {fileID: -360148854920578490, guid: 93445d4d7c9f07349b69d2935e533830,
       type: 3}
     _refCol: {fileID: 0}
   DrawMultiObjectStamps: 1
@@ -1498,38 +1339,6 @@ MonoBehaviour:
   _editor_shareSelected: 0
   ParentPreset: {fileID: 11400000, guid: daab46818ef153e4f84e9c29aee3f28c, type: 2}
   ParentPack: {fileID: 11400000}
---- !u!114 &-3871266082098350306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094c68a3bf2d9a349851f593cd6a24eb, type: 3}
-  m_Name: SR_CellDistance-[FieldMod_ModPack_Props1]
-  m_EditorClassIdentifier: 
-  Logic: 0
-  Negate: 0
-  Global: 0
-  Enabled: 1
-  Ignore: 0
-  _editor_drawRule: 1
-  CellAllow: 0
-  AllConditionsMet: 1
-  OffsetCellMode: 0
-  OffsetCell: {x: 0, y: 0, z: 0}
-  DistanceMustBe: 1
-  IgnoreSelf: 1
-  DistanceToTagged: PrpCabl
-  CheckMode: 0
-  Distance: 3
-  MeasureIn: 1
-  DistanceMulVariable:
-    name: 
-    requiredType: 1
-    Tooltip: 
 --- !u!114 &-3750130944347034452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1641,35 +1450,6 @@ MonoBehaviour:
   RoomCellsDivBy:
     Min: 4
     Max: 6
---- !u!114 &-3173177807522844394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fb9bb48e6362ba4c9c028367d99c3ea, type: 3}
-  m_Name: SR_CheckCollisionInCell-[Floor Cables Prop]
-  m_EditorClassIdentifier: 
-  Logic: 0
-  Negate: 0
-  Global: 0
-  Enabled: 1
-  Ignore: 0
-  _editor_drawRule: 1
-  CellAllow: 1
-  AllConditionsMet: 1
-  StopOnTagged: 
-  CheckMode: 0
-  OffsetColliderOrigin: {x: 0, y: 0.05, z: 0}
-  CollisionBoxSize: 0.4
-  AllMeshesBounds: 0
-  CheckAlsoNeightbourCells: 0
-  CheckNeightboursDistance: 1
-  NonUniformScale: {x: 1, y: 1, z: 1}
-  Debug: 0
 --- !u!114 &-3104731014385982314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2060,31 +1840,6 @@ MonoBehaviour:
   _DrawOffsets: 1
   _DrawRandomization: 1
   _DrawAdditionals: 0
---- !u!114 &-1256980070833822014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bc77d951f142764987a7f4ca1cf8f61, type: 3}
-  m_Name: SR_SpawningPropability-[FieldMod_ModPack_Props1]
-  m_EditorClassIdentifier: 
-  Logic: 0
-  Negate: 0
-  Global: 0
-  Enabled: 1
-  Ignore: 0
-  _editor_drawRule: 1
-  CellAllow: 0
-  AllConditionsMet: 1
-  Propability: 0.265
-  PropabilityMulVariable:
-    name: Spawn Propability Multiplier
-    requiredType: 1
-    Tooltip: 
 --- !u!114 &-1233046819360894730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2113,38 +1868,6 @@ MonoBehaviour:
   CheckMode: 0
   Distance: 14
   MeasureIn: 0
-  DistanceMulVariable:
-    name: 
-    requiredType: 1
-    Tooltip: 
---- !u!114 &-1173517654826443648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094c68a3bf2d9a349851f593cd6a24eb, type: 3}
-  m_Name: SR_CellDistance-[Cardbox Debris]
-  m_EditorClassIdentifier: 
-  Logic: 0
-  Negate: 0
-  Global: 0
-  Enabled: 1
-  Ignore: 0
-  _editor_drawRule: 1
-  CellAllow: 0
-  AllConditionsMet: 1
-  OffsetCellMode: 0
-  OffsetCell: {x: 0, y: 0, z: 0}
-  DistanceMustBe: 1
-  IgnoreSelf: 1
-  DistanceToTagged: FProp
-  CheckMode: 0
-  Distance: 1.5
-  MeasureIn: 1
   DistanceMulVariable:
     name: 
     requiredType: 1
@@ -2218,31 +1941,6 @@ MonoBehaviour:
   _DrawOffsets: 1
   _DrawRandomization: 0
   _DrawAdditionals: 0
---- !u!114 &-677014756891403174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bc77d951f142764987a7f4ca1cf8f61, type: 3}
-  m_Name: SR_SpawningPropability-[Cardbox Debris]
-  m_EditorClassIdentifier: 
-  Logic: 0
-  Negate: 0
-  Global: 0
-  Enabled: 1
-  Ignore: 0
-  _editor_drawRule: 1
-  CellAllow: 0
-  AllConditionsMet: 1
-  Propability: 0.198
-  PropabilityMulVariable:
-    name: Spawn Propability Multiplier
-    requiredType: 1
-    Tooltip: 
 --- !u!114 &-552624553598668537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2319,7 +2017,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Propability: 0.16
   PropabilityMulVariable:
@@ -2339,8 +2037,6 @@ MonoBehaviour:
   m_Name: ModPack_RoomInteriorProps
   m_EditorClassIdentifier: 
   FieldModificators:
-  - {fileID: 6921288919283922783}
-  - {fileID: -7019258575112548385}
   - {fileID: -4211052369908908318}
   - {fileID: 6990836390581781409}
   - {fileID: -6555750166738775983}
@@ -3191,33 +2887,6 @@ MonoBehaviour:
     ToCheck:
     - {x: 0, y: 0, z: 0}
     EditorDisplayColor: {r: 0.4, g: 0.4, b: 1, a: 0.95}
---- !u!114 &5053733332359199983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 226bc5f4badaab3438244b84b7cee058, type: 3}
-  m_Name: SR_Rotate-[Floor Cables Prop]
-  m_EditorClassIdentifier: 
-  Logic: 0
-  Negate: 0
-  Global: 0
-  Enabled: 1
-  Ignore: 0
-  _editor_drawRule: 1
-  CellAllow: 1
-  AllConditionsMet: 1
-  GetRotationFromTagged: 
-  CheckMode: 0
-  RotationEulerOffset: {x: 0, y: 0, z: 0}
-  RandomRotation: {x: 0, y: 360, z: 0}
-  MaxDegreesSteps: {x: 0, y: 0, z: 0}
-  LocalRotation: 0
-  OverrideRotation: 1
 --- !u!114 &5273103598138036228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3401,7 +3070,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -3415,33 +3084,6 @@ MonoBehaviour:
     name: 
     requiredType: 1
     Tooltip: 
---- !u!114 &5628367110739129002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 226bc5f4badaab3438244b84b7cee058, type: 3}
-  m_Name: SR_Rotate-[Cardbox Debris]
-  m_EditorClassIdentifier: 
-  Logic: 0
-  Negate: 0
-  Global: 0
-  Enabled: 1
-  Ignore: 0
-  _editor_drawRule: 1
-  CellAllow: 1
-  AllConditionsMet: 1
-  GetRotationFromTagged: 
-  CheckMode: 0
-  RotationEulerOffset: {x: 0, y: 0, z: 0}
-  RandomRotation: {x: 0, y: 180, z: 0}
-  MaxDegreesSteps: {x: 0, y: 0, z: 0}
-  LocalRotation: 0
-  OverrideRotation: 1
 --- !u!114 &5680174466899482988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3708,85 +3350,11 @@ MonoBehaviour:
   _editor_drawRule: 1
   CellAllow: 0
   AllConditionsMet: 1
-  Propability: 0.361
+  Propability: 0.01
   PropabilityMulVariable:
     name: Spawn Propability Multiplier
     requiredType: 1
     Tooltip: 
---- !u!114 &6921288919283922783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 671fd9c659a53a04eb310656f11c9125, type: 3}
-  m_Name: Floor Cables Prop
-  m_EditorClassIdentifier: 
-  TemporaryContainer: {fileID: 0}
-  Enabled: 0
-  ModTag: PrpCabl,FProp
-  DrawMeshAndBox: 0
-  Combine: 0
-  RunEmittersIfContains: 0
-  DrawSetupFor: 0
-  OStamp: {fileID: 0}
-  DrawObjectStamps: 1
-  OMultiStamp: {fileID: 0}
-  PrefabsList:
-  - Prefab: {fileID: 5378372515239103691, guid: 6abde4190a877c44792b8f8b3181a471,
-      type: 3}
-    MainCollider: {fileID: 0}
-    subID: 0
-    _refMesh: {fileID: 294035802834221057, guid: 240ac714d0ae5e840af098ec0436d2df,
-      type: 3}
-    _refCol: {fileID: 0}
-  - Prefab: {fileID: 8612186942574817900, guid: bd2fab79ace73f04cbada949315f68f8,
-      type: 3}
-    MainCollider: {fileID: 0}
-    subID: 0
-    _refMesh: {fileID: 1151223607611069066, guid: c7490281b506ad141839b03537c78c73,
-      type: 3}
-    _refCol: {fileID: 0}
-  DrawMultiObjectStamps: 1
-  Spawners:
-  - Enabled: 1
-    Name: Random
-    SpawnerTag: 
-    StampPrefabID: -1
-    Parent: {fileID: 6921288919283922783}
-    Rules:
-    - {fileID: -1256980070833822014}
-    - {fileID: -3871266082098350306}
-    - {fileID: -5294317940347779489}
-    - {fileID: 5053733332359199983}
-    - {fileID: -3173177807522844394}
-    Mode: 3
-    CellCheckMode: 2
-    _Editor_SpawnerAdvancedOptionsFoldout: 0
-    OnScalledGrid: 1
-    Repeat: 1
-    DontInheritRotations: 0
-    SwitchSpawnedToStatic: 0
-    MultipleToSpawn: 0
-    UseGlobalRules: 1
-    UseParentPackageRules: 1
-    _wasEnablingGlobalRules: 1
-    ScaleAccess: 1
-    DisplayPreviewGUI: 1
-    IsSubSpawner: 0
-    _EditorDisplaySpawnerHeader: 0
-  SubSpawners: []
-  VariantOf: {fileID: 0}
-  _editor_drawStamp: 1
-  _editor_drawSpawners: 1
-  _editor_drawGlobalRules: 0
-  _editor_drawModPackRules: 0
-  _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 04321e34df64d8042bf5580bf76d0468, type: 2}
-  ParentPack: {fileID: 11400000}
 --- !u!114 &6990836390581781409
 MonoBehaviour:
   m_ObjectHideFlags: 0

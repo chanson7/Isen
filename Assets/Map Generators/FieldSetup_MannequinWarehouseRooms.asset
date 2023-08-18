@@ -48,7 +48,7 @@ MonoBehaviour:
   DrawObjectStamps: 1
   OMultiStamp: {fileID: 0}
   PrefabsList:
-  - Prefab: {fileID: 8431194137298830544, guid: c838f7d7f01330b4793bc2b218e078ac,
+  - Prefab: {fileID: 6093011504441123016, guid: 6fd293255d69bc445afff5e8da683532,
       type: 3}
     MainCollider: {fileID: 1042095636606727239, guid: e77fb30a80d8e834aa2791c5eec846a0,
       type: 3}
@@ -2330,9 +2330,8 @@ MonoBehaviour:
   - {fileID: 6990836390581781409, guid: dc18e9675467dc24b9016b0775e1f7be, type: 2}
   - {fileID: -6163071984533231416, guid: dc18e9675467dc24b9016b0775e1f7be, type: 2}
   - {fileID: -2925440260325766704, guid: dc18e9675467dc24b9016b0775e1f7be, type: 2}
-  - {fileID: -4211052369908908318, guid: dc18e9675467dc24b9016b0775e1f7be, type: 2}
-  - {fileID: -7019258575112548385, guid: dc18e9675467dc24b9016b0775e1f7be, type: 2}
-  - {fileID: 6921288919283922783, guid: dc18e9675467dc24b9016b0775e1f7be, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: -7159157248221465641, guid: dc18e9675467dc24b9016b0775e1f7be, type: 2}
   - {fileID: 923952724925266947, guid: dc18e9675467dc24b9016b0775e1f7be, type: 2}
   CustomPostEvents: []
