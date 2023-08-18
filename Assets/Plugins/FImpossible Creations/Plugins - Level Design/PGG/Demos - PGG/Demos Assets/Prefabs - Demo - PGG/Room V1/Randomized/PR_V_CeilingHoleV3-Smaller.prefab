@@ -19,6 +19,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PR_V_CeilingHoleV3-Smaller
       objectReference: {fileID: 0}
+    - target: {fileID: 7624489514776844575, guid: a05e791e6e6649842815b3797f4f3a6d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7673719325210782419, guid: a05e791e6e6649842815b3797f4f3a6d,
         type: 3}
       propertyPath: m_RootOrder

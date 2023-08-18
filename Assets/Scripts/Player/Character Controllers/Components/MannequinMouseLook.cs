@@ -33,6 +33,28 @@ namespace ECM.Components
 
         #endregion
 
+        #region PROPERTIES
+
+        /// <summary>
+        /// The minimum yaw angle (in degrees).
+        /// </summary>
+        public float minYawAngle
+        {
+            get { return _minYawAngle; }
+            set { _minYawAngle = Mathf.Clamp(value, -180.0f, 180.0f); }
+        }
+
+        /// <summary>
+        /// The maximum yaw angle (in degrees).
+        /// </summary>
+
+        public float maxYawAngle
+        {
+            get { return _maxYawAngle; }
+            set { _maxYawAngle = Mathf.Clamp(value, -180.0f, 180.0f); }
+        }
+        #endregion
+
         #region INPUT
         void OnMove(InputValue input)
         {
@@ -73,6 +95,18 @@ namespace ECM.Components
                 cameraPivotTransform.localRotation = Quaternion.Euler(_verticalRotation, _horizontalRotation, 0f);
             }
 
+        }
+
+        #endregion
+
+        #region MONOBEHAVIOUR
+
+        public override void OnValidate()
+        {
+            base.OnValidate();
+
+            minYawAngle = _minYawAngle;
+            maxYawAngle = _maxYawAngle;
         }
 
         #endregion

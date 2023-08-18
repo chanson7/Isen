@@ -4,7 +4,8 @@ public class PlayerSpawnPoint : MonoBehaviour
 {
     public void Start()
     {
-        GameManager.singleton.RegisterPlayerSpawnPoint(this.transform);
+        if(GameManager.singleton is not null)
+            GameManager.singleton.RegisterPlayerSpawnPoint(transform);
     }
 
 }

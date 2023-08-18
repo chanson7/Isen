@@ -6,13 +6,12 @@ public class NetworkMapController : NetworkBehaviour
 {
     BuildPlannerExecutor buildPlannerExecutor;
     [SerializeField] ScriptableEvent randomSeedSetEvent;
-    [SerializeField] MapData mapData;
     [SyncVar(hook = nameof(OnRandomSeedSet))] int randomSeed;
     const int SEED_RANGE = 9999;
 
     private void Awake()
     {
-        buildPlannerExecutor = this.GetComponent<BuildPlannerExecutor>();
+        buildPlannerExecutor = GetComponent<BuildPlannerExecutor>();
     }
 
     public override void OnStartServer()
@@ -22,8 +21,7 @@ public class NetworkMapController : NetworkBehaviour
 
     void OnRandomSeedSet(int oldSeed, int newSeed)
     {
-        mapData.randomSeed = newSeed;
-        randomSeedSetEvent.Raise();
+         randomSeedSetEvent.Raise();
     }
 
     public void GenerateMap()

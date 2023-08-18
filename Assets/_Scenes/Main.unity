@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3784,7 +3784,7 @@ MonoBehaviour:
   autoConnectClientBuild: 0
   sendRate: 30
   offlineScene: Assets/_Scenes/Main.unity
-  onlineScene: Assets/_Scenes/Mannequin_Warehouse.unity
+  onlineScene: Assets/_Scenes/Mannequin Warehouse.unity
   transport: {fileID: 1766148519}
   networkAddress: localhost
   maxConnections: 100
@@ -3794,8 +3794,9 @@ MonoBehaviour:
   autoCreatePlayer: 0
   playerSpawnMethod: 0
   spawnPrefabs:
-  - {fileID: 4908637372374807870, guid: b6aff498318530548846ca11825c3d98, type: 3}
-  - {fileID: 5082118526173675251, guid: a01875303799d93499ed3ff86f661058, type: 3}
+  - {fileID: 7575958861045079788, guid: 64ed47025ba72d744986a650bf9f5425, type: 3}
+  - {fileID: 7575958861045079788, guid: 684280c3861011948b1337ff201f4843, type: 3}
+  - {fileID: 4908637372374807870, guid: 8f137ebf5d9390948b9632a9c6026313, type: 3}
   snapshotSettings:
     bufferTimeMultiplier: 2
     bufferLimit: 32

@@ -1927,7 +1927,7 @@ GameObject:
   - component: {fileID: 3215305593635993661}
   - component: {fileID: 6623914374862882301}
   - component: {fileID: 4682938170063742003}
-  - component: {fileID: 8927185404775042786}
+  - component: {fileID: 3370836025366814690}
   - component: {fileID: 3640962575369462651}
   - component: {fileID: 5469055302045122111}
   - component: {fileID: 996367338546598562}
@@ -2122,7 +2122,7 @@ MonoBehaviour:
   thirdPersonVcam: {fileID: 5319602476891466067, guid: c65e2aafb2aac6a43a66209e43a371b1,
     type: 3}
   cameraPivot: {fileID: 5529745944972769647}
---- !u!114 &8927185404775042786
+--- !u!114 &3370836025366814690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2131,9 +2131,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7575958861045079788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 931c550dad477914b9653c7b141657f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6612d082f6d9f90448a825c2fb341bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   animator: {fileID: 5938803555547867327}
 --- !u!114 &3640962575369462651
 MonoBehaviour:
@@ -2192,9 +2195,6 @@ MonoBehaviour:
   _lockCursor: 1
   _lateralSensitivity: 2
   _verticalSensitivity: 2
-  _smooth: 0
-  _smoothTime: 5
-  _clampPitch: 1
   _minPitchAngle: -90
   _maxPitchAngle: 90
   _minYawAngle: -45

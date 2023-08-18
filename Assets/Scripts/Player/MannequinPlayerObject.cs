@@ -10,7 +10,7 @@ public class MannequinPlayerObject : NetworkBehaviour
 
     public override void OnStartLocalPlayer()
     {
-        this.GetComponent<PlayerInput>().enabled = true;
+        GetComponent<PlayerInput>().enabled = true;
 
         thirdPersonVcam = Instantiate(thirdPersonVcam);
         thirdPersonVcam.Follow = cameraPivot;

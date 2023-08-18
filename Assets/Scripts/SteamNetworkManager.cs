@@ -207,8 +207,6 @@ public class SteamNetworkManager : NetworkManager
             NetworkClient.Ready();
 
         NetworkClient.AddPlayer();
-
-        Debug.Log($"Client {NetworkClient.connection.connectionId} -> Server: 'Add me to the server!'");
     }
 
     /// <summary>
